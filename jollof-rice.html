@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Authentic West African Jollof Rice recipe: Step-by-step cooking instructions, scalable ingredients, cultural heritage, and video tutorial.">
+  <title>Authentic Smoky Jollof Rice Recipe | Tastes of Africa</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍚</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-icon">🍲</span>
+        <span>Tastes of Africa</span>
+      </a>
+
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation">☰</button>
+
+      <nav role="navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="recipes.html" class="nav-link active">Recipes</a></li>
+          <li><a href="regions.html" class="nav-link">Culinary Regions</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="btn-icon" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- Recipe Hero Header -->
+    <section class="recipe-header-hero">
+      <div class="container recipe-header-grid">
+        <div class="recipe-hero-text">
+          <nav aria-label="Breadcrumb" style="margin-bottom: 1rem; font-size: 0.85rem; color: var(--text-muted);">
+            <a href="index.html">Home</a> / <a href="recipes.html">Recipes</a> / <span>Jollof Rice</span>
+          </nav>
+          <span class="pill-badge" style="background:var(--primary-light); color:var(--primary-terracotta); margin-bottom: 0.75rem; display:inline-block;">
+            West African Heritage
+          </span>
+          <h1>Smoky West African Jollof Rice</h1>
+          <p>
+            The crown jewel of West African celebrations. Long-grain parboiled rice slow-simmered in a vibrant purée of roasted red bell peppers, plum tomatoes, onions, and fiery Scotch bonnet peppers, infused with garlic, ginger, thyme, and bay leaves.
+          </p>
+
+          <div class="recipe-quick-stats">
+            <div class="stat-item">
+              <span class="stat-label">Prep Time</span>
+              <span class="stat-value">20 Mins</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Cook Time</span>
+              <span class="stat-value">45 Mins</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Origin</span>
+              <span class="stat-value">Senegambia / West Africa</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Heat Level</span>
+              <span class="stat-value">🌶️ Medium-Hot</span>
+            </div>
+          </div>
+
+          <!-- Favorite Button -->
+          <div style="display:flex; align-items:center; gap: 1rem;">
+            <button class="btn btn-outline btn-favorite" data-id="jollof-rice" style="position:static; width:auto; height:auto; padding:0.6rem 1.25rem; border-radius:var(--radius-full);">
+              🤍 Save to Favorites
+            </button>
+            <span style="font-size:0.9rem; color:var(--text-muted);">Saved recipes persist across visits</span>
+          </div>
+        </div>
+
+        <div class="recipe-hero-image">
+          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1000&q=80" alt="Generous serving of smoky party Jollof rice with golden plantains" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content & Cooking Instructions -->
+    <section class="section">
+      <div class="container recipe-content-grid">
+
+        <!-- Left Column: Scalable Ingredients & Cultural Background -->
+        <aside class="recipe-sidebar">
+
+          <!-- Servings Scaler (DOM Interactive) -->
+          <div class="servings-scaler" id="servingsScaler">
+            <span style="font-weight:600; font-size:0.9rem;">Adjust Servings:</span>
+            <button type="button" class="scaler-btn" id="decreaseServings" aria-label="Decrease servings">-</button>
+            <span class="servings-count" id="servingsCount" data-base-servings="4">4 Servings</span>
+            <button type="button" class="scaler-btn" id="increaseServings" aria-label="Increase servings">+</button>
+          </div>
+
+          <!-- Ingredients Box -->
+          <div class="ingredients-box">
+            <h3>Ingredients List</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted);">Quantities scale dynamically with the buttons above.</p>
+
+            <ul class="ingredients-list">
+              <li>
+                <span>Long-grain parboiled rice (washed)</span>
+                <strong><span class="ingredient-qty" data-base="3">3</span> cups</strong>
+              </li>
+              <li>
+                <span>Ripe plum / Roma tomatoes</span>
+                <strong><span class="ingredient-qty" data-base="5">5</span> whole</strong>
+              </li>
+              <li>
+                <span>Red bell peppers (Tatashe)</span>
+                <strong><span class="ingredient-qty" data-base="3">3</span> large</strong>
+              </li>
+              <li>
+                <span>Scotch bonnet peppers (Ata Rodo)</span>
+                <strong><span class="ingredient-qty" data-base="2">2</span> peppers</strong>
+              </li>
+              <li>
+                <span>Red onions (divided)</span>
+                <strong><span class="ingredient-qty" data-base="2">2</span> medium</strong>
+              </li>
+              <li>
+                <span>Tomato paste</span>
+                <strong><span class="ingredient-qty" data-base="0.5">½</span> cup</strong>
+              </li>
+              <li>
+                <span>Rich chicken or beef stock</span>
+                <strong><span class="ingredient-qty" data-base="3.5">3.5</span> cups</strong>
+              </li>
+              <li>
+                <span>Dried thyme leaves</span>
+                <strong><span class="ingredient-qty" data-base="1">1</span> tbsp</strong>
+              </li>
+              <li>
+                <span>Curry powder</span>
+                <strong><span class="ingredient-qty" data-base="1">1</span> tbsp</strong>
+              </li>
+              <li>
+                <span>Bay leaves</span>
+                <strong><span class="ingredient-qty" data-base="3">3</span> leaves</strong>
+              </li>
+              <li>
+                <span>Vegetable oil / Red palm oil</span>
+                <strong><span class="ingredient-qty" data-base="0.5">½</span> cup</strong>
+              </li>
+              <li>
+                <span>Butter (for finish gloss)</span>
+                <strong><span class="ingredient-qty" data-base="2">2</span> tbsp</strong>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cultural History Box -->
+          <div style="margin-top: 2rem; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem;">
+            <h4 style="margin-bottom:0.75rem; color:var(--primary-terracotta);">Cultural Significance</h4>
+            <p style="font-size:0.95rem; line-height: 1.6;">
+              Jollof rice traces its ancestral heritage to the <mark>Wolof Empire of Senegal</mark> (where it is known as <em>Thieboudienne</em>). As it spread across the West African coastline, nations developed beloved variations—sparking the famous and celebratory "Jollof Wars" between Nigeria, Ghana, and Sierra Leone.
+            </p>
+          </div>
+        </aside>
+
+        <!-- Right Column: Step-by-Step Instructions & Media -->
+        <article class="instructions-section">
+          <h2>Cooking Instructions</h2>
+          <p>Follow these traditional techniques to achieve the authentic taste, fluffy grains, and signature party smoke.</p>
+
+          <!-- Expandable Step 1 -->
+          <details open>
+            <summary>Step 1: Roast and Blend the Pepper Base (Obeyata)</summary>
+            <div class="step-content">
+              <p>
+                Roughly chop the plum tomatoes, red bell peppers, Scotch bonnets, and one of the red onions. Place them in a blender and purée until completely smooth. Pour the mixture into a wide heavy pot and boil on medium-high heat for 12–15 minutes until the excess water evaporates and the mixture forms a thick, concentrated red paste.
+              </p>
+            </div>
+          </details>
+
+          <!-- Expandable Step 2 -->
+          <details open>
+            <summary>Step 2: Fry the Aromatics and Tomato Paste</summary>
+            <div class="step-content">
+              <p>
+                In a large heavy-bottom Dutch oven, heat your vegetable oil over medium heat. Thinly slice the second red onion and fry for 4 minutes until golden and fragrant. Stir in the concentrated tomato paste and fry constantly for 5–7 minutes to remove tartness and caramelize the sugars.
+              </p>
+            </div>
+          </details>
+
+          <!-- Expandable Step 3 -->
+          <details>
+            <summary>Step 3: Simmer the Stew Base with Spices</summary>
+            <div class="step-content">
+              <p>
+                Add the boiled pepper purée into the fried tomato paste. Add dried thyme, curry powder, crushed bouillon seasoning, and 3 bay leaves. Cover and simmer on low heat for 15 minutes until fragrant oil pools on top of the sauce. Scoop out 1 cup of this stew and reserve it for the final steam stage.
+              </p>
+            </div>
+          </details>
+
+          <!-- Expandable Step 4 -->
+          <details>
+            <summary>Step 4: Incorporate the Rice and Steam Cook</summary>
+            <div class="step-content">
+              <p>
+                Pour in the rich chicken stock and bring to a rolling boil. Taste and adjust salt. Add the washed, drained long-grain parboiled rice. Stir gently once so the grains are submerged in the sauce. Seal the top of the pot tightly with aluminum foil before putting on the lid—this traps all steam to cook the rice evenly without making it mushy. Reduce heat to the lowest simmer for 30 minutes.
+              </p>
+            </div>
+          </details>
+
+          <!-- Expandable Step 5 -->
+          <details>
+            <summary>Step 5: The "Party Smoke" Finish</summary>
+            <div class="step-content">
+              <p>
+                Remove the lid and foil. Gently fold in the reserved stew and 2 tablespoons of butter for a glossy sheen. Increase the heat to medium-high for 3–5 minutes, allowing the bottom layer of rice to lightly char. This imparts the legendary wood-smoke flavor beloved in West African celebration parties. Serve with sweet fried dodo (plantains).
+              </p>
+            </div>
+          </details>
+
+          <!-- Video Tutorial -->
+          <div style="margin-top: 3rem;">
+            <h3>Video Tutorial</h3>
+            <p>Watch this culinary masterclass on achieving the perfect party Jollof texture and smokiness.</p>
+            <div class="video-responsive-wrapper">
+              <iframe 
+                src="https://www.youtube-nocookie.com/embed/n3o_n2gZq68" 
+                title="How to make authentic Nigerian Jollof Rice" 
+                allowfullscreen 
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Nutritional Facts Table -->
+          <div style="margin-top: 3rem;">
+            <h3>Nutritional Facts</h3>
+            <p>Estimated nutritional profile per serving (based on 1 cup cooked Jollof rice):</p>
+            <div class="table-responsive">
+              <table class="nutrition-table">
+                <thead>
+                  <tr>
+                    <th>Nutrient</th>
+                    <th>Amount per Serving</th>
+                    <th>% Daily Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Calories</td>
+                    <td>385 kcal</td>
+                    <td>19%</td>
+                  </tr>
+                  <tr>
+                    <td>Carbohydrates</td>
+                    <td>68 g</td>
+                    <td>25%</td>
+                  </tr>
+                  <tr>
+                    <td>Protein</td>
+                    <td>7 g</td>
+                    <td>14%</td>
+                  </tr>
+                  <tr>
+                    <td>Dietary Fiber</td>
+                    <td>3.8 g</td>
+                    <td>15%</td>
+                  </tr>
+                  <tr>
+                    <td>Total Fat</td>
+                    <td>9.5 g</td>
+                    <td>12%</td>
+                  </tr>
+                  <tr>
+                    <td>Vitamin C (from Tatashe & Tomatoes)</td>
+                    <td>42 mg</td>
+                    <td>47%</td>
+                  </tr>
+                  <tr>
+                    <td>Iron</td>
+                    <td>2.6 mg</td>
+                    <td>14%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Country of Origin Map -->
+          <div style="margin-top: 3rem;">
+            <h3>Country of Origin</h3>
+            <p>Geographic home of the Senegambia region and coastal West Africa where Jollof rice developed:</p>
+            <div class="map-container">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8036237.604116499!2d-17.54522955!3d14.497401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172f5b3c5bb71%3A0x5a46a550d51030e6!2sSenegal!5e0!3m2!1sen!2srw!4v1700000000000!5m2!1sen!2srw" 
+                title="Map of Senegal and West Africa" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 Tastes of Africa Project. Authentic Recipe Series.</p>
+        <p><a href="recipes.html" style="color:var(--saffron-gold);">← Back to All Recipes</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

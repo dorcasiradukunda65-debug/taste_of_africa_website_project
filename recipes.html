@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore traditional and contemporary African recipes with scalable ingredients, cultural histories, video tutorials, and nutritional facts.">
+  <title>Authentic Recipes | Tastes of Africa</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍲</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Tastes of Africa Homepage">
+        <span class="brand-icon" aria-hidden="true">🍲</span>
+        <span>Tastes of Africa</span>
+      </a>
+
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="recipes.html" class="nav-link active">Recipes</a></li>
+          <li><a href="regions.html" class="nav-link">Culinary Regions</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="btn-icon" aria-label="Toggle dark and light theme">
+          🌙
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- Page Header Hero -->
+    <section class="section-muted" style="padding-block: 3.5rem 2.5rem; border-bottom: 1px solid var(--border-color);">
+      <div class="container text-center" style="text-align: center;">
+        <span class="pill-badge" style="background:var(--primary-light); color:var(--primary-terracotta); margin-bottom: 1rem; display:inline-block;">
+          📖 Traditional Cookery & Modern Flavors
+        </span>
+        <h1>Authentic African Recipe Collection</h1>
+        <p style="max-width: 680px; margin-inline: auto; font-size: 1.15rem;">
+          Each recipe in our archive is tested to honor ancestral traditions, balance complex spice bouquets, and celebrate communal hospitality.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Filter & Grid Section -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Dynamic Filter Controls -->
+        <div class="filter-bar" role="group" aria-label="Filter dishes by culinary region">
+          <button type="button" class="filter-btn active" data-filter="all">All Dishes (5)</button>
+          <button type="button" class="filter-btn" data-filter="west-africa">West Africa</button>
+          <button type="button" class="filter-btn" data-filter="east-africa">East Africa</button>
+          <button type="button" class="filter-btn" data-filter="north-africa">North Africa</button>
+          <button type="button" class="filter-btn" data-filter="southern-africa">Southern Africa</button>
+        </div>
+
+        <p id="visibleRecipeCount" style="text-align: center; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2.5rem;">
+          Showing 5 authentic recipes
+        </p>
+
+        <!-- Recipe Cards Grid -->
+        <div class="card-grid">
+
+          <!-- 1. Jollof Rice -->
+          <article class="recipe-card" data-region="west-africa">
+            <button class="btn-favorite" data-id="jollof-rice" aria-label="Save Jollof Rice to favorites">🤍</button>
+            <figure>
+              <div class="card-image-wrap">
+                <span class="card-badge">West Africa</span>
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Platter of West African Jollof Rice" loading="lazy">
+              </div>
+              <figcaption class="card-body">
+                <div class="card-meta">
+                  <span>⏱️ 55 Mins</span>
+                  <span>🍽️ 6 Servings</span>
+                  <span>🔥 Medium Spice</span>
+                </div>
+                <h2 class="card-title" style="font-size:1.4rem;">Smoky Party Jollof Rice</h2>
+                <p class="card-desc">
+                  Long-grain parboiled rice slow-simmered in an aromatic roasted bell pepper, tomato, and habanero base with thyme, curry, and signature bottom-pot smoke.
+                </p>
+                <div class="card-footer">
+                  <span style="font-weight:700; color:var(--saffron-gold);">Nigeria & Ghana</span>
+                  <a href="jollof-rice.html" class="btn btn-primary" style="padding:0.45rem 1.15rem; font-size:0.85rem;">Cook Recipe →</a>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+
+          <!-- 2. Moroccan Lamb Tagine -->
+          <article class="recipe-card" data-region="north-africa">
+            <button class="btn-favorite" data-id="tagine" aria-label="Save Moroccan Lamb Tagine to favorites">🤍</button>
+            <figure>
+              <div class="card-image-wrap">
+                <span class="card-badge">North Africa</span>
+                <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=800&q=80" alt="Moroccan Lamb Tagine with apricots and almonds" loading="lazy">
+              </div>
+              <figcaption class="card-body">
+                <div class="card-meta">
+                  <span>⏱️ 1 hr 45 Mins</span>
+                  <span>🍽️ 4 Servings</span>
+                  <span>🍯 Sweet & Savory</span>
+                </div>
+                <h2 class="card-title" style="font-size:1.4rem;">Moroccan Lamb Tagine</h2>
+                <p class="card-desc">
+                  Tender lamb braised low and slow with sweet Turkish apricots, golden prunes, toasted almonds, honey, and aromatic Ras el Hanout in a clay tagine.
+                </p>
+                <div class="card-footer">
+                  <span style="font-weight:700; color:var(--saffron-gold);">Morocco</span>
+                  <a href="tagine.html" class="btn btn-primary" style="padding:0.45rem 1.15rem; font-size:0.85rem;">Cook Recipe →</a>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+
+          <!-- 3. Ethiopian Injera with Doro Wat -->
+          <article class="recipe-card" data-region="east-africa">
+            <button class="btn-favorite" data-id="injera" aria-label="Save Ethiopian Injera to favorites">🤍</button>
+            <figure>
+              <div class="card-image-wrap">
+                <span class="card-badge">East Africa</span>
+                <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=800&q=80" alt="Ethiopian Injera flatbread with spicy chicken stew" loading="lazy">
+              </div>
+              <figcaption class="card-body">
+                <div class="card-meta">
+                  <span>⏱️ 3-Day Ferment</span>
+                  <span>🍽️ 6 Servings</span>
+                  <span>🌶️ Rich Berbere</span>
+                </div>
+                <h2 class="card-title" style="font-size:1.4rem;">Injera with Doro Wat</h2>
+                <p class="card-desc">
+                  Ancient iron-rich teff grain fermented into an aerated sour flatbread, served alongside slow-cooked chicken drumsticks and hardboiled eggs in spicy berbere stew.
+                </p>
+                <div class="card-footer">
+                  <span style="font-weight:700; color:var(--saffron-gold);">Ethiopia</span>
+                  <a href="injera.html" class="btn btn-primary" style="padding:0.45rem 1.15rem; font-size:0.85rem;">Cook Recipe →</a>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+
+          <!-- 4. Rwandan Cassava Leaf Isombe -->
+          <article class="recipe-card" data-region="east-africa">
+            <button class="btn-favorite" data-id="isombe" aria-label="Save Rwandan Isombe to favorites">🤍</button>
+            <figure>
+              <div class="card-image-wrap">
+                <span class="card-badge">East Africa</span>
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" alt="Traditional Rwandan Isombe made from young cassava leaves" loading="lazy">
+              </div>
+              <figcaption class="card-body">
+                <div class="card-meta">
+                  <span>⏱️ 1 hr 15 Mins</span>
+                  <span>🍽️ 6 Servings</span>
+                  <span>🥜 Creamy Peanut</span>
+                </div>
+                <h2 class="card-title" style="font-size:1.4rem;">Traditional Rwandan Isombe</h2>
+                <p class="card-desc">
+                  Finely pounded young cassava leaves slow-boiled with leeks, garlic, eggplant, and beef stock, finished with rich natural roasted peanut paste.
+                </p>
+                <div class="card-footer">
+                  <span style="font-weight:700; color:var(--saffron-gold);">Rwanda</span>
+                  <a href="isombe.html" class="btn btn-primary" style="padding:0.45rem 1.15rem; font-size:0.85rem;">Cook Recipe →</a>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+
+          <!-- 5. South African Durban Bunny Chow -->
+          <article class="recipe-card" data-region="southern-africa">
+            <button class="btn-favorite" data-id="bunny-chow" aria-label="Save Bunny Chow to favorites">🤍</button>
+            <figure>
+              <div class="card-image-wrap">
+                <span class="card-badge">Southern Africa</span>
+                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80" alt="South African Durban Bunny Chow hollowed bread filled with curry" loading="lazy">
+              </div>
+              <figcaption class="card-body">
+                <div class="card-meta">
+                  <span>⏱️ 50 Mins</span>
+                  <span>🍽️ 4 Servings</span>
+                  <span>🔥 Fiery Durban Curry</span>
+                </div>
+                <h2 class="card-title" style="font-size:1.4rem;">Durban Mutton Bunny Chow</h2>
+                <p class="card-desc">
+                  Crusty white bread hollowed out and filled to the brim with deeply spiced lamb and potato curry, accompanied by grated carrot and vinegar sambal.
+                </p>
+                <div class="card-footer">
+                  <span style="font-weight:700; color:var(--saffron-gold);">South Africa</span>
+                  <a href="bunny-chow.html" class="btn btn-primary" style="padding:0.45rem 1.15rem; font-size:0.85rem;">Cook Recipe →</a>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="color:#FFFFFF; margin-bottom:1rem; display:inline-flex;">
+            <span class="brand-icon">🍲</span>
+            <span>Tastes of Africa</span>
+          </a>
+          <p style="color:#A89C90; font-size:0.95rem;">
+            Preserving culinary heritage through living recipes, spice science, and cultural storytelling.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="regions.html">Culinary Regions</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Featured Dishes</h4>
+          <ul class="footer-links">
+            <li><a href="jollof-rice.html">Jollof Rice</a></li>
+            <li><a href="tagine.html">Lamb Tagine</a></li>
+            <li><a href="injera.html">Injera & Doro Wat</a></li>
+            <li><a href="isombe.html">Rwandan Isombe</a></li>
+            <li><a href="bunny-chow.html">Bunny Chow</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p style="color:#A89C90; font-size:0.9rem;">
+            Get monthly recipes and regional ingredient guides delivered to your inbox.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="your.email@alustudent.com" required>
+            <button type="submit" class="btn btn-primary" style="padding:0.65rem 1.25rem;">Join</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Tastes of Africa Project. All rights reserved.</p>
+        <p>African Leadership University Formative Assignment.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

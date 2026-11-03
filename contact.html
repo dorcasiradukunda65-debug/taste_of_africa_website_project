@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact the Tastes of Africa team - Submit family recipes, inquire about regional culinary workshops, or partner with our heritage archive.">
+  <title>Contact Us | Tastes of Africa</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✉️</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Tastes of Africa Homepage">
+        <span class="brand-icon" aria-hidden="true">🍲</span>
+        <span>Tastes of Africa</span>
+      </a>
+
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="recipes.html" class="nav-link">Recipes</a></li>
+          <li><a href="regions.html" class="nav-link">Culinary Regions</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="recipes.html" class="btn-icon" title="View Saved Favorites" aria-label="View Saved Favorites">
+          ❤️<span id="favoritesCountBadge" class="pill-badge" style="display:none; font-size:0.7rem; padding: 2px 6px; margin-left: 2px;">0</span>
+        </a>
+        <button id="themeToggleBtn" class="btn-icon" aria-label="Toggle dark and light theme">
+          🌙
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- Page Header Hero -->
+    <section class="section-muted" style="padding-block: 4rem 2.5rem; border-bottom: 1px solid var(--border-color);">
+      <div class="container text-center" style="text-align: center;">
+        <span class="pill-badge" style="background:var(--primary-light); color:var(--primary-terracotta); margin-bottom: 1rem; display:inline-block;">
+          🤝 Connect & Collaborate
+        </span>
+        <h1>We Would Love to Hear From You</h1>
+        <p style="max-width: 680px; margin-inline: auto; font-size: 1.15rem;">
+          Have a treasured family recipe, a regional culinary inquiry, or a culinary heritage partnership proposal? Send us a message below.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-wrapper">
+
+          <!-- Left Info Column -->
+          <div class="contact-info">
+            <span class="tagline" style="color:var(--primary-terracotta); font-weight:700; text-transform:uppercase; font-size:0.85rem; letter-spacing:0.05em; display:block; margin-bottom:0.5rem;">
+              Culinary Archive & Community
+            </span>
+            <h3>Connect with African Food Enthusiasts</h3>
+            <p>
+              Our research team collaborates with traditional elders, home cooks, historians, and agrarian cooperatives across all 54 African countries.
+            </p>
+
+            <ul class="contact-details">
+              <li>
+                <span style="font-size:1.3rem;">📍</span>
+                <span><strong>Culinary Hub:</strong> African Leadership University, Kigali Innovation City, Rwanda</span>
+              </li>
+              <li>
+                <span style="font-size:1.3rem;">📧</span>
+                <span><strong>General Email:</strong> contact@tastesofafrica.org</span>
+              </li>
+              <li>
+                <span style="font-size:1.3rem;">🌶️</span>
+                <span><strong>Recipe Submissions:</strong> recipes@tastesofafrica.org</span>
+              </li>
+              <li>
+                <span style="font-size:1.3rem;">⏰</span>
+                <span><strong>Response Time:</strong> Within 24–48 hours</span>
+              </li>
+            </ul>
+
+            <div style="background:var(--bg-subtle); padding:1.25rem; border-radius:var(--radius-sm); border-left:4px solid var(--primary-terracotta); margin-top:2rem;">
+              <h4 style="margin-bottom:0.35rem; font-size:1rem;">Recipe Submission Note</h4>
+              <p style="margin:0; font-size:0.85rem; color:var(--text-secondary);">
+                When submitting an ancestral recipe, please include your cultural region, traditional utensils used, and any songs or folklore tied to the meal.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Accessible Form & Dynamic JS Feedback -->
+          <div class="contact-form-container">
+
+            <!-- Dynamic Confirmation Card (Hidden by default, shown by JS on successful validation) -->
+            <div id="confirmationCard" class="confirmation-card" role="alert" aria-live="polite">
+              <span style="font-size:3rem; display:block; margin-bottom:1rem;">🎉</span>
+              <h3 id="dynamicGreeting">Thank you! We've received your message.</h3>
+              <p>
+                Our culinary team has received your submission and will get in touch with you shortly. Thank you for contributing to Africa's living culinary story!
+              </p>
+              <div style="margin-top:1.5rem;">
+                <a href="recipes.html" class="btn btn-primary">Browse Recipes Meanwhile →</a>
+              </div>
+            </div>
+
+            <!-- The Contact Form -->
+            <form id="contactForm" novalidate aria-label="Contact Tastes of Africa Form">
+
+              <!-- Name Field with Label -->
+              <div class="form-group">
+                <label for="name">Full Name <span style="color:var(--paprika-red);">*</span></label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  class="form-control" 
+                  placeholder="e.g. Amina Hassan" 
+                  required 
+                  autocomplete="name">
+                <div class="form-feedback" id="nameError">Please enter your name.</div>
+              </div>
+
+              <!-- Email Field with Label -->
+              <div class="form-group">
+                <label for="email">Email Address <span style="color:var(--paprika-red);">*</span></label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  class="form-control" 
+                  placeholder="e.g. a.hassan@alustudent.com" 
+                  required 
+                  autocomplete="email">
+                <div class="form-feedback" id="emailError">Please enter a valid email address.</div>
+              </div>
+
+              <!-- Country Field with <select> and <datalist> Suggestions -->
+              <div class="form-group">
+                <label for="country">Country of Origin / Residence <span style="color:var(--paprika-red);">*</span></label>
+                <input 
+                  list="africanCountries" 
+                  id="country" 
+                  name="country" 
+                  class="form-control" 
+                  placeholder="Search or select country (e.g. Rwanda, Nigeria, Morocco...)" 
+                  required>
+                
+                <!-- Datalist Suggestions -->
+                <datalist id="africanCountries">
+                  <option value="Algeria">
+                  <option value="Angola">
+                  <option value="Cameroon">
+                  <option value="Democratic Republic of the Congo">
+                  <option value="Egypt">
+                  <option value="Eritrea">
+                  <option value="Ethiopia">
+                  <option value="Ghana">
+                  <option value="Ivory Coast">
+                  <option value="Kenya">
+                  <option value="Madagascar">
+                  <option value="Mali">
+                  <option value="Morocco">
+                  <option value="Mozambique">
+                  <option value="Nigeria">
+                  <option value="Rwanda">
+                  <option value="Senegal">
+                  <option value="South Africa">
+                  <option value="Tanzania">
+                  <option value="Tunisia">
+                  <option value="Uganda">
+                  <option value="Zambia">
+                  <option value="Zimbabwe">
+                </datalist>
+              </div>
+
+              <!-- Message Textarea with Label -->
+              <div class="form-group">
+                <label for="message">Your Message / Recipe Story <span style="color:var(--paprika-red);">*</span></label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  class="form-control" 
+                  placeholder="Share your thoughts, story, or questions (minimum 21 characters)..." 
+                  rows="5" 
+                  required></textarea>
+                <div class="char-counter" id="charCounter">0 / 20 minimum characters</div>
+                <div class="form-feedback" id="messageError">Please enter at least 21 characters in your message.</div>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary" id="submitBtn" style="width:100%; padding:0.95rem; font-size:1.05rem;">
+                Send Message →
+              </button>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="color:#FFFFFF; margin-bottom:1rem; display:inline-flex;">
+            <span class="brand-icon">🍲</span>
+            <span>Tastes of Africa</span>
+          </a>
+          <p style="color:#A89C90; font-size:0.95rem;">
+            A digital celebration of African culinary wisdom, ingredients, and community.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes Directory</a></li>
+            <li><a href="regions.html">Regional Foodways</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Regional Staples</h4>
+          <ul class="footer-links">
+            <li><a href="jollof-rice.html">Jollof Rice</a></li>
+            <li><a href="tagine.html">Moroccan Tagine</a></li>
+            <li><a href="injera.html">Ethiopian Injera</a></li>
+            <li><a href="isombe.html">Rwandan Isombe</a></li>
+            <li><a href="bunny-chow.html">Bunny Chow</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p style="color:#A89C90; font-size:0.9rem;">
+            Join our culinary collective for monthly heritage recipes.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="your.name@alustudent.com" required>
+            <button type="submit" class="btn btn-primary" style="padding:0.65rem 1.25rem;">Join</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Tastes of Africa Project. All rights reserved.</p>
+        <p><a href="index.html" style="color:var(--saffron-gold);">← Back to Home</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Africa's diverse culinary terroirs: West Africa's smoky pepper stews, North Africa's aromatic tagines, East Africa's highland grains, and Southern Africa's open-fire braais.">
+  <title>Culinary Regions of Africa | Tastes of Africa</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-icon">🍲</span>
+        <span>Tastes of Africa</span>
+      </a>
+
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation">☰</button>
+
+      <nav role="navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="recipes.html" class="nav-link">Recipes</a></li>
+          <li><a href="regions.html" class="nav-link active">Culinary Regions</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="btn-icon" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- Region Page Hero -->
+    <section class="section-muted" style="padding-block: 4rem 2.5rem; border-bottom: 1px solid var(--border-color);">
+      <div class="container text-center" style="text-align: center;">
+        <span class="pill-badge" style="background:var(--primary-light); color:var(--primary-terracotta); margin-bottom: 1rem; display:inline-block;">
+          🗺️ Terroirs, Ingredients & Traditions
+        </span>
+        <h1>Africa's Major Culinary Regions</h1>
+        <p style="max-width: 720px; margin-inline: auto; font-size: 1.15rem;">
+          From coastal fishing communities to highland fertile volcanic slopes and arid caravan spice routes, discover how geography and climate sculpted Africa's richest foodways.
+        </p>
+      </div>
+    </section>
+
+    <!-- Region 1: West Africa -->
+    <section class="section" id="west-africa">
+      <div class="container">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items:center;">
+          <div>
+            <span class="pill-badge" style="background:var(--primary-terracotta); color:#fff; margin-bottom:0.75rem; display:inline-block;">
+              West Africa
+            </span>
+            <h2>The Kingdom of Bold Peppers & Grains</h2>
+            <p>
+              West African cuisine is renowned for its fearless use of heat, deep umami, and vibrant red palm oils. Cooking builds upon a holy trinity of aromatics: <mark>fresh plum tomatoes, red bell peppers (Tatashe), and scotch bonnets</mark>.
+            </p>
+            <p>
+              Ancient preservation techniques such as smoking fish over mangrove wood and fermenting <mark>locust beans (Dawadawa / Iru)</mark> impart complex depths that rival any culinary tradition. Grains like indigenous <mark>Fonio</mark>, cassava tubers for fufu, and parboiled rice form the energy-rich heart of every festive meal.
+            </p>
+            <div style="background:var(--bg-subtle); padding:1.25rem; border-radius:var(--radius-sm); margin-block:1.25rem; border-left:4px solid var(--primary-terracotta);">
+              <h4 style="margin-bottom:0.35rem;">Signature Staples:</h4>
+              <p style="margin:0; font-size:0.9rem;">
+                Cassava (Fufu), Plantains (Dodo), Yam, Egusi seeds, Red Palm Oil, Grains of Selim, Dried crayfish.
+              </p>
+            </div>
+            <div>
+              <a href="jollof-rice.html" class="btn btn-primary">Cook Authentic Jollof Rice →</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="video-responsive-wrapper">
+              <iframe 
+                src="https://www.youtube-nocookie.com/embed/Zq_y6Z1-c2s" 
+                title="West African Street Food and Cooking Culture" 
+                allowfullscreen 
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr style="border:none; border-top:1px solid var(--border-color); max-width:1200px; margin-inline:auto;">
+
+    <!-- Region 2: East Africa -->
+    <section class="section section-muted" id="east-africa">
+      <div class="container">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items:center;">
+          <div style="order: 2;">
+            <span class="pill-badge" style="background:var(--moringa-green); color:#fff; margin-bottom:0.75rem; display:inline-block;">
+              East Africa & The Great Lakes
+            </span>
+            <h2>Highland Fermentation & Swahili Coastlines</h2>
+            <p>
+              East Africa encompasses both the fertile highland plateau of Rwanda and Ethiopia and the ancient maritime Swahili coast of Kenya and Tanzania. Here, cooking splits into two master categories: the communal pastoral foodways of the interior and the spice-perfumed coconut curries of the Indian Ocean.
+            </p>
+            <p>
+              In Rwanda and Uganda, lush mountain soil produces nutrient-dense greens like <mark>pounded young cassava leaves (Isombe)</mark> and matooke bananas, simmered with roasted peanut paste. In Ethiopia, the ancient supergrain <mark>Teff</mark> is fermented for 72 hours into spongy sourdough injera and served with fiery, complex <mark>Berbere</mark> stews.
+            </p>
+            <div style="background:var(--bg-surface); padding:1.25rem; border-radius:var(--radius-sm); margin-block:1.25rem; border-left:4px solid var(--moringa-green);">
+              <h4 style="margin-bottom:0.35rem;">Signature Staples:</h4>
+              <p style="margin:0; font-size:0.9rem;">
+                Teff flour, Matooke plantains, Cassava greens, Roasted groundnuts, Cardamom (Korarima), Niter Kibbeh butter.
+              </p>
+            </div>
+            <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+              <a href="injera.html" class="btn btn-primary">Explore Injera Recipe →</a>
+              <a href="isombe.html" class="btn btn-outline">Explore Rwandan Isombe →</a>
+            </div>
+          </div>
+
+          <div style="order: 1;">
+            <div class="video-responsive-wrapper">
+              <iframe 
+                src="https://www.youtube-nocookie.com/embed/n4p5w9k3z-U" 
+                title="East African Highland and Coastal Foodways" 
+                allowfullscreen 
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr style="border:none; border-top:1px solid var(--border-color); max-width:1200px; margin-inline:auto;">
+
+    <!-- Region 3: North Africa (Maghreb) -->
+    <section class="section" id="north-africa">
+      <div class="container">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items:center;">
+          <div>
+            <span class="pill-badge" style="background:var(--saffron-gold); color:#fff; margin-bottom:0.75rem; display:inline-block;">
+              North Africa (The Maghreb)
+            </span>
+            <h2>The Fragrant Symphony of the Atlas & Desert</h2>
+            <p>
+              North African gastronomy is an exquisite blend of indigenous Amazigh (Berber) practices, Arab trade route spices, and Mediterranean agriculture. Food is slow-cooked in <mark>conical earthenware tagines</mark> that recycle steam into braising juices.
+            </p>
+            <p>
+              Signature spice blends like <mark>Ras el Hanout</mark> harmonize up to 30 aromatic spices—rose petals, cinnamon, nutmeg, ginger, and saffron. Savory meats are braised alongside <mark>preserved salted lemons, dried figs, and wild honey</mark>, accompanied by hand-steamed semolina couscous.
+            </p>
+            <div style="background:var(--bg-subtle); padding:1.25rem; border-radius:var(--radius-sm); margin-block:1.25rem; border-left:4px solid var(--saffron-gold);">
+              <h4 style="margin-bottom:0.35rem;">Signature Staples:</h4>
+              <p style="margin:0; font-size:0.9rem;">
+                Semolina Couscous, Preserved Lemons, Ras el Hanout, Saffron, Harissa paste, Orange blossom water, Argan oil.
+              </p>
+            </div>
+            <div>
+              <a href="tagine.html" class="btn btn-primary">Discover Moroccan Tagine →</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="video-responsive-wrapper">
+              <iframe 
+                src="https://www.youtube-nocookie.com/embed/Pj1Gj575t0M" 
+                title="North African Maghreb Tagines and Spices" 
+                allowfullscreen 
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 Tastes of Africa Project. Celebrating Africa's Diverse Regional Terroirs.</p>
+        <p><a href="index.html" style="color:var(--saffron-gold);">← Back to Homepage</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

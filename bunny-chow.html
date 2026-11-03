@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Authentic South African Durban Bunny Chow recipe: Hollowed bread loaf filled with fiery mutton curry, scalable ingredients, video tutorial, and history.">
+  <title>Durban Mutton Bunny Chow Recipe | Tastes of Africa</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍞</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-icon">🍲</span>
+        <span>Tastes of Africa</span>
+      </a>
+
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation">☰</button>
+
+      <nav role="navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="recipes.html" class="nav-link active">Recipes</a></li>
+          <li><a href="regions.html" class="nav-link">Culinary Regions</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="btn-icon" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- Recipe Hero Header -->
+    <section class="recipe-header-hero">
+      <div class="container recipe-header-grid">
+        <div class="recipe-hero-text">
+          <nav aria-label="Breadcrumb" style="margin-bottom: 1rem; font-size: 0.85rem; color: var(--text-muted);">
+            <a href="index.html">Home</a> / <a href="recipes.html">Recipes</a> / <span>Durban Bunny Chow</span>
+          </nav>
+          <span class="pill-badge" style="background:var(--saffron-light); color:var(--clove-brown); margin-bottom: 0.75rem; display:inline-block;">
+            Southern African Street Food
+          </span>
+          <h1>South African Durban Bunny Chow</h1>
+          <p>
+            An iconic South African street food classic born in the coastal city of Durban. A hollowed loaf of crusty white bread filled with rich, spicy mutton or lamb curry with soft potatoes, crowned with the pulled bread "virgin" stopper and pickled carrot sambal.
+          </p>
+
+          <div class="recipe-quick-stats">
+            <div class="stat-item">
+              <span class="stat-label">Prep Time</span>
+              <span class="stat-value">20 Mins</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Cook Time</span>
+              <span class="stat-value">50 Mins</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Origin</span>
+              <span class="stat-value">Durban / South Africa</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Heat Level</span>
+              <span class="stat-value">🔥 Fiery & Rich</span>
+            </div>
+          </div>
+
+          <!-- Favorite Button -->
+          <div style="display:flex; align-items:center; gap: 1rem;">
+            <button class="btn btn-outline btn-favorite" data-id="bunny-chow" style="position:static; width:auto; height:auto; padding:0.6rem 1.25rem; border-radius:var(--radius-full);">
+              🤍 Save to Favorites
+            </button>
+            <span style="font-size:0.9rem; color:var(--text-muted);">Saved recipes persist across visits</span>
+          </div>
+        </div>
+
+        <div class="recipe-hero-image">
+          <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1000&q=80" alt="South African Durban Bunny Chow bread loaf filled with mutton curry" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content & Cooking Instructions -->
+    <section class="section">
+      <div class="container recipe-content-grid">
+
+        <!-- Left Column: Scalable Ingredients & Cultural Background -->
+        <aside class="recipe-sidebar">
+
+          <!-- Servings Scaler (DOM Interactive) -->
+          <div class="servings-scaler" id="servingsScaler">
+            <span style="font-weight:600; font-size:0.9rem;">Adjust Servings:</span>
+            <button type="button" class="scaler-btn" id="decreaseServings" aria-label="Decrease servings">-</button>
+            <span class="servings-count" id="servingsCount" data-base-servings="4">4 Servings</span>
+            <button type="button" class="scaler-btn" id="increaseServings" aria-label="Increase servings">+</button>
+          </div>
+
+          <!-- Ingredients Box -->
+          <div class="ingredients-box">
+            <h3>Ingredients List</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted);">Quantities scale dynamically with the buttons above.</p>
+
+            <ul class="ingredients-list">
+              <li>
+                <span>Crusty unsliced white bread loaves</span>
+                <strong><span class="ingredient-qty" data-base="2">2</span> loaves (halved)</strong>
+              </li>
+              <li>
+                <span>Mutton, lamb, or beef (cubed on bone)</span>
+                <strong><span class="ingredient-qty" data-base="2">2</span> lbs</strong>
+              </li>
+              <li>
+                <span>Yukon gold potatoes (quartered)</span>
+                <strong><span class="ingredient-qty" data-base="4">4</span> medium</strong>
+              </li>
+              <li>
+                <span>Durban masala / curry powder</span>
+                <strong><span class="ingredient-qty" data-base="3">3</span> tbsp</strong>
+              </li>
+              <li>
+                <span>Coriander seeds & cumin seeds</span>
+                <strong><span class="ingredient-qty" data-base="1">1</span> tsp each</strong>
+              </li>
+              <li>
+                <span>Fresh curry leaves</span>
+                <strong><span class="ingredient-qty" data-base="10">10</span> leaves</strong>
+              </li>
+              <li>
+                <span>Cinnamon stick & star anise</span>
+                <strong><span class="ingredient-qty" data-base="1">1</span> each</strong>
+              </li>
+              <li>
+                <span>Finely chopped tomatoes</span>
+                <strong><span class="ingredient-qty" data-base="2">2</span> whole</strong>
+              </li>
+              <li>
+                <span>Garlic and ginger paste</span>
+                <strong><span class="ingredient-qty" data-base="2">2</span> tbsp</strong>
+              </li>
+              <li>
+                <span>Sunflower oil</span>
+                <strong><span class="ingredient-qty" data-base="3">3</span> tbsp</strong>
+              </li>
+              <li>
+                <span>Grated carrots (for vinegar sambal)</span>
+                <strong><span class="ingredient-qty" data-base="2">2</span> cups</strong>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cultural History Box -->
+          <div style="margin-top: 2rem; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem;">
+            <h4 style="margin-bottom:0.75rem; color:var(--saffron-gold);">Ingenuity Under Apartheid</h4>
+            <p style="font-size:0.95rem; line-height: 1.6;">
+              <mark>Bunny Chow</mark> was invented in the 1940s by Indian migrant workers and golf caddies in Durban. Under apartheid segregation laws, non-white workers were barred from dining inside restaurants. Clever cooks hollowed loaves of bread as edible, portable takeout bowls that could be carried onto the sugar cane fields and eaten by hand without utensils.
+            </p>
+          </div>
+        </aside>
+
+        <!-- Right Column: Step-by-Step Instructions & Media -->
+        <article class="instructions-section">
+          <h2>Cooking Instructions</h2>
+          <p>Technique for building a deep red Durban curry gravy and preparing the crusty bread bowl.</p>
+
+          <details open>
+            <summary>Step 1: Temper Whole Spices and Aromatics</summary>
+            <div class="step-content">
+              <p>
+                Heat oil in a heavy pot over medium heat. Add the cinnamon stick, star anise, cumin seeds, and fresh curry leaves. Allow them to sizzle for 60 seconds until aromatic. Add the chopped onions and cook until golden brown. Stir in ginger and garlic paste.
+              </p>
+            </div>
+          </details>
+
+          <details open>
+            <summary>Step 2: Bloom Durban Curry Powder & Sear Mutton</summary>
+            <div class="step-content">
+              <p>
+                Add the vibrant red Durban curry powder and turmeric. Stir constantly for 45 seconds to cook out raw spices without burning. Add the cubed mutton and toss vigorously to seal all sides in the red paste.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Step 3: Simmer with Tomatoes and Potatoes</summary>
+            <div class="step-content">
+              <p>
+                Add chopped tomatoes and 1.5 cups of water. Cover and simmer gently for 30 minutes. Add the quartered potatoes and continue cooking until the meat is fork-tender and the potatoes absorb the gravy and begin breaking down slightly to naturally thicken the sauce.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Step 4: Hollow the Bread Loaves</summary>
+            <div class="step-content">
+              <p>
+                Take a fresh, crusty loaf of unsliced white bread. Cut it in half (or into quarters). With clean hands, scoop out the soft white bread crumb from the center, keeping the outer crust walls intact. Reserve the scooped bread ("virgin / top piece") to serve on top.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Step 5: Fill and Garnish with Carrot Sambal</summary>
+            <div class="step-content">
+              <p>
+                Ladle the bubbling mutton curry and gravy directly into the bread cavity, allowing the gravy to soak into the bottom walls. Place the bread top back over the curry. Serve piping hot alongside grated carrot and green chili vinegar sambal. Eat purely by hand, tearing bread from the sides to dip into the gravy.
+              </p>
+            </div>
+          </details>
+
+          <!-- Video Tutorial -->
+          <div style="margin-top: 3rem;">
+            <h3>Video Tutorial</h3>
+            <p>See how traditional Durban Bunny Chow is crafted in KwaZulu-Natal street markets:</p>
+            <div class="video-responsive-wrapper">
+              <iframe 
+                src="https://www.youtube-nocookie.com/embed/n4p5w9k3z-U" 
+                title="South African Durban Bunny Chow Tutorial" 
+                allowfullscreen 
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Nutritional Facts Table -->
+          <div style="margin-top: 3rem;">
+            <h3>Nutritional Facts</h3>
+            <p>Estimated nutritional profile per serving (half-loaf bunny chow with curry):</p>
+            <div class="table-responsive">
+              <table class="nutrition-table">
+                <thead>
+                  <tr>
+                    <th>Nutrient</th>
+                    <th>Amount per Serving</th>
+                    <th>% Daily Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Calories</td>
+                    <td>680 kcal</td>
+                    <td>34%</td>
+                  </tr>
+                  <tr>
+                    <td>Protein</td>
+                    <td>38 g</td>
+                    <td>76%</td>
+                  </tr>
+                  <tr>
+                    <td>Carbohydrates</td>
+                    <td>76 g</td>
+                    <td>28%</td>
+                  </tr>
+                  <tr>
+                    <td>Total Fat</td>
+                    <td>24 g</td>
+                    <td>31%</td>
+                  </tr>
+                  <tr>
+                    <td>Dietary Fiber</td>
+                    <td>6.2 g</td>
+                    <td>25%</td>
+                  </tr>
+                  <tr>
+                    <td>Sodium</td>
+                    <td>640 mg</td>
+                    <td>27%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Country of Origin Map -->
+          <div style="margin-top: 3rem;">
+            <h3>Country of Origin</h3>
+            <p>Durban, KwaZulu-Natal on the Indian Ocean coast of South Africa:</p>
+            <div class="map-container">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3546747.886361529!2d29.0!3d-29.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7aa0000000001%3A0x6a00000000000000!2sDurban%2C%20South%20Africa!5e0!3m2!1sen!2srw!4v1700000000000!5m2!1sen!2srw" 
+                title="Map of Durban South Africa" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 Tastes of Africa Project. Authentic Recipe Series.</p>
+        <p><a href="recipes.html" style="color:var(--saffron-gold);">← Back to All Recipes</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

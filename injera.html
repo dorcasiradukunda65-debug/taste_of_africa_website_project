@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Authentic Ethiopian Injera flatbread and spicy Doro Wat chicken stew recipe: Scalable ingredients, fermentation science, step-by-step tutorial, and origin map.">
+  <title>Ethiopian Injera & Doro Wat Recipe | Tastes of Africa</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫓</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-icon">🍲</span>
+        <span>Tastes of Africa</span>
+      </a>
+
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation">☰</button>
+
+      <nav role="navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="recipes.html" class="nav-link active">Recipes</a></li>
+          <li><a href="regions.html" class="nav-link">Culinary Regions</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="btn-icon" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- Recipe Hero Header -->
+    <section class="recipe-header-hero">
+      <div class="container recipe-header-grid">
+        <div class="recipe-hero-text">
+          <nav aria-label="Breadcrumb" style="margin-bottom: 1rem; font-size: 0.85rem; color: var(--text-muted);">
+            <a href="index.html">Home</a> / <a href="recipes.html">Recipes</a> / <span>Injera & Doro Wat</span>
+          </nav>
+          <span class="pill-badge" style="background:var(--saffron-light); color:var(--clove-brown); margin-bottom: 0.75rem; display:inline-block;">
+            Horn of Africa Heritage
+          </span>
+          <h1>Ethiopian Injera with Doro Wat</h1>
+          <p>
+            The quintessential communal feast of the Horn of Africa. A fermented sourdough flatbread crafted from ancient teff grain with characteristic 'eyes' (aerated pockets), served as an edible platter for tender chicken and boiled eggs braised in caramelized onions and Berbere spice.
+          </p>
+
+          <div class="recipe-quick-stats">
+            <div class="stat-item">
+              <span class="stat-label">Ferment Time</span>
+              <span class="stat-value">3 Days</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Cook Time</span>
+              <span class="stat-value">1 hr 15 Mins</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Origin</span>
+              <span class="stat-value">Ethiopia & Eritrea</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Heat Level</span>
+              <span class="stat-value">🌶️ Bold Berbere</span>
+            </div>
+          </div>
+
+          <!-- Favorite Button -->
+          <div style="display:flex; align-items:center; gap: 1rem;">
+            <button class="btn btn-outline btn-favorite" data-id="injera" style="position:static; width:auto; height:auto; padding:0.6rem 1.25rem; border-radius:var(--radius-full);">
+              🤍 Save to Favorites
+            </button>
+            <span style="font-size:0.9rem; color:var(--text-muted);">Saved recipes persist across visits</span>
+          </div>
+        </div>
+
+        <div class="recipe-hero-image">
+          <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=1000&q=80" alt="Platter of spongy Ethiopian Injera topped with vibrant spicy stews and eggs" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content & Cooking Instructions -->
+    <section class="section">
+      <div class="container recipe-content-grid">
+
+        <!-- Left Column: Scalable Ingredients & Cultural Background -->
+        <aside class="recipe-sidebar">
+
+          <!-- Servings Scaler (DOM Interactive) -->
+          <div class="servings-scaler" id="servingsScaler">
+            <span style="font-weight:600; font-size:0.9rem;">Adjust Servings:</span>
+            <button type="button" class="scaler-btn" id="decreaseServings" aria-label="Decrease servings">-</button>
+            <span class="servings-count" id="servingsCount" data-base-servings="6">6 Servings</span>
+            <button type="button" class="scaler-btn" id="increaseServings" aria-label="Increase servings">+</button>
+          </div>
+
+          <!-- Ingredients Box -->
+          <div class="ingredients-box">
+            <h3>Ingredients List</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted);">Quantities scale dynamically with the buttons above.</p>
+
+            <ul class="ingredients-list">
+              <li>
+                <span>Brown or ivory teff flour</span>
+                <strong><span class="ingredient-qty" data-base="3">3</span> cups</strong>
+              </li>
+              <li>
+                <span>Filtered water (for fermentation)</span>
+                <strong><span class="ingredient-qty" data-base="3.5">3.5</span> cups</strong>
+              </li>
+              <li>
+                <span>Chicken legs/thighs (skinless, scored)</span>
+                <strong><span class="ingredient-qty" data-base="6">6</span> pieces</strong>
+              </li>
+              <li>
+                <span>Hard-boiled eggs (peeled and pierced)</span>
+                <strong><span class="ingredient-qty" data-base="6">6</span> whole</strong>
+              </li>
+              <li>
+                <span>Red onions (pureed finely without oil)</span>
+                <strong><span class="ingredient-qty" data-base="4">4</span> large</strong>
+              </li>
+              <li>
+                <span>Authentic Ethiopian Berbere spice blend</span>
+                <strong><span class="ingredient-qty" data-base="3">3</span> tbsp</strong>
+              </li>
+              <li>
+                <span>Niter Kibbeh (spiced clarified butter)</span>
+                <strong><span class="ingredient-qty" data-base="0.5">½</span> cup</strong>
+              </li>
+              <li>
+                <span>Fresh ginger and garlic paste</span>
+                <strong><span class="ingredient-qty" data-base="2">2</span> tbsp</strong>
+              </li>
+              <li>
+                <span>Fresh lemon juice (for chicken brine)</span>
+                <strong><span class="ingredient-qty" data-base="2">2</span> tbsp</strong>
+              </li>
+              <li>
+                <span>Cardamom powder (Korarima)</span>
+                <strong><span class="ingredient-qty" data-base="0.5">½</span> tsp</strong>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cultural History Box -->
+          <div style="margin-top: 2rem; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem;">
+            <h4 style="margin-bottom:0.75rem; color:var(--primary-terracotta);">The Art of Gursha</h4>
+            <p style="font-size:0.95rem; line-height: 1.6;">
+              Injera serves simultaneously as a platter, tablecloth, and utensil. Diners tear pieces of injera with the right hand to pinch bites of spicy wats. Feeding a bite directly into a companion's mouth—known as <mark>Gursha</mark>—is an act of profound love, friendship, and hospitality.
+            </p>
+          </div>
+        </aside>
+
+        <!-- Right Column: Step-by-Step Instructions & Media -->
+        <article class="instructions-section">
+          <h2>Cooking Instructions</h2>
+          <p>Two-part authentic guide: Fermenting the teff batter and braising the legendary Doro Wat stew.</p>
+
+          <details open>
+            <summary>Step 1: Ferment the Teff Batter (3-Day Process)</summary>
+            <div class="step-content">
+              <p>
+                In a large glass bowl, combine teff flour and filtered water. Whisk until smooth, cover with a breathable cheesecloth, and let ferment at warm room temperature for 3 days. Tiny bubbles and an aromatic, pleasantly sour aroma will emerge. Discard the liquid that rises to the top and whisk the remaining thick batter.
+              </p>
+            </div>
+          </details>
+
+          <details open>
+            <summary>Step 2: Cook Injera on the Mitad / Crêpe Pan</summary>
+            <div class="step-content">
+              <p>
+                Heat a non-stick flat crêpe pan or traditional clay <em>mitad</em> over medium heat. Pour ¾ cup of batter starting in a spiral from the outer edge inward. When thousands of small craters ("eyes") form across the entire surface (about 45 seconds), cover with a high-domed lid and steam for 2 minutes until cooked through without flipping. Cool on clean woven mats.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Step 3: Dry-Caramelize the Onions (The Secret to Doro Wat)</summary>
+            <div class="step-content">
+              <p>
+                Place the finely minced red onions into a dry heavy Dutch oven with NO oil or water. Sauté on medium-low heat, stirring constantly for 30–40 minutes. The moisture will evaporate, turning the onions into a rich, sweet, mahogany purée. This forms the foundation of great Doro Wat.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Step 4: Bloom Berbere and Simmer Chicken</summary>
+            <div class="step-content">
+              <p>
+                Add Niter Kibbeh (spiced clarified butter) to the caramelized onions, followed by garlic, ginger, and 3 tablespoons of Berbere spice. Fry the spices for 5 minutes until intensely fragrant. Add the lemon-marinated chicken pieces and 1 cup of chicken broth. Simmer on low for 40 minutes.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Step 5: Add Hard-Boiled Eggs & Final Presentation</summary>
+            <div class="step-content">
+              <p>
+                Pierce the peeled hard-boiled eggs with a fork so the red gravy penetrates the whites. Nestle the eggs into the stew, sprinkle ground Korarima (false cardamom), and simmer for 10 more minutes. Unfurl a wide sheet of Injera on a large communal tray, ladle the Doro Wat into the center, and serve with rolled extra injera.
+              </p>
+            </div>
+          </details>
+
+          <!-- Video Tutorial -->
+          <div style="margin-top: 3rem;">
+            <h3>Video Tutorial</h3>
+            <p>Master the ancient fermentation of 100% teff injera and deep Berbere braising:</p>
+            <div class="video-responsive-wrapper">
+              <iframe 
+                src="https://www.youtube-nocookie.com/embed/n4p5w9k3z-U" 
+                title="How to make 100% Teff Injera and Doro Wat" 
+                allowfullscreen 
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Nutritional Facts Table -->
+          <div style="margin-top: 3rem;">
+            <h3>Nutritional Facts</h3>
+            <p>Estimated nutritional profile per serving (1 large Injera roll with Doro Wat & 1 egg):</p>
+            <div class="table-responsive">
+              <table class="nutrition-table">
+                <thead>
+                  <tr>
+                    <th>Nutrient</th>
+                    <th>Amount per Serving</th>
+                    <th>% Daily Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Calories</td>
+                    <td>460 kcal</td>
+                    <td>23%</td>
+                  </tr>
+                  <tr>
+                    <td>Protein</td>
+                    <td>34 g</td>
+                    <td>68%</td>
+                  </tr>
+                  <tr>
+                    <td>Dietary Fiber (Teff prebiotic)</td>
+                    <td>7.2 g</td>
+                    <td>29%</td>
+                  </tr>
+                  <tr>
+                    <td>Total Fat</td>
+                    <td>16 g</td>
+                    <td>21%</td>
+                  </tr>
+                  <tr>
+                    <td>Iron (High Bioavailability)</td>
+                    <td>7.8 mg</td>
+                    <td>43%</td>
+                  </tr>
+                  <tr>
+                    <td>Calcium</td>
+                    <td>125 mg</td>
+                    <td>12%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Country of Origin Map -->
+          <div style="margin-top: 3rem;">
+            <h3>Country of Origin</h3>
+            <p>The Ethiopian Highlands and Great Rift Valley:</p>
+            <div class="map-container">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8076624.717614051!2d34.7833075!3d9.1450000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1635da179477e387%3A0x6b40e785501869e8!2sEthiopia!5e0!3m2!1sen!2srw!4v1700000000000!5m2!1sen!2srw" 
+                title="Map of Ethiopia" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 Tastes of Africa Project. Authentic Recipe Series.</p>
+        <p><a href="recipes.html" style="color:var(--saffron-gold);">← Back to All Recipes</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

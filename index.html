@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tastes of Africa - A vibrant celebration of African culinary heritage, authentic regional recipes, and spice traditions across West, East, North, and Southern Africa.">
+  <title>Tastes of Africa | Celebrating African Culinary Traditions</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍲</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Tastes of Africa Homepage">
+        <span class="brand-icon" aria-hidden="true">🍲</span>
+        <span>Tastes of Africa</span>
+      </a>
+
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="recipes.html" class="nav-link">Recipes</a></li>
+          <li><a href="regions.html" class="nav-link">Culinary Regions</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="recipes.html" class="btn-icon" title="View Saved Favorites" aria-label="View Saved Favorites">
+          ❤️<span id="favoritesCountBadge" class="pill-badge" style="display:none; font-size:0.7rem; padding: 2px 6px; margin-left: 2px;">0</span>
+        </a>
+        <button id="themeToggleBtn" class="btn-icon" aria-label="Toggle dark and light theme">
+          🌙
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- Hero Section -->
+    <section class="hero-section" aria-labelledby="heroTitle">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badges">
+            <span class="pill-badge">🌍 Pan-African Gastronomy</span>
+            <span class="pill-badge">🌶️ Authentic Spice Profiles</span>
+          </div>
+          <h1 id="heroTitle">Taste the Rich Heritage of Africa</h1>
+          <p>
+            From the aromatic tagines of the Atlas Mountains to the bold smokiness of Senegambian Jollof and the communal warmth of Rwandan Isombe, embark on an immersive culinary voyage across Africa's vibrant kitchens.
+          </p>
+          <div class="hero-cta-group">
+            <a href="recipes.html" class="btn btn-primary">Explore Authentic Recipes →</a>
+            <a href="regions.html" class="btn btn-outline-light">Discover Food Regions</a>
+          </div>
+        </div>
+
+        <!-- Embedded YouTube Video: African Food Culture -->
+        <div class="hero-video-box">
+          <div class="video-responsive-wrapper">
+            <iframe 
+              src="https://www.youtube-nocookie.com/embed/Zq_y6Z1-c2s" 
+              title="Introduction to African Food Culture and Flavors" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen 
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Recipe Showcase & Filter Section -->
+    <section class="section" aria-labelledby="dishesTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="tagline">Culinary Masterpieces</span>
+          <h2 id="dishesTitle">Featured Signature Dishes</h2>
+          <p>Hand-crafted culinary icons representing time-honored traditions, generational cooking techniques, and communal hospitality.</p>
+        </div>
+
+        <!-- Interactive Region Filter Buttons -->
+        <div class="filter-bar" role="group" aria-label="Filter dishes by culinary region">
+          <button type="button" class="filter-btn active" data-filter="all">All Specialties</button>
+          <button type="button" class="filter-btn" data-filter="west-africa">West Africa</button>
+          <button type="button" class="filter-btn" data-filter="east-africa">East Africa</button>
+          <button type="button" class="filter-btn" data-filter="north-africa">North Africa</button>
+          <button type="button" class="filter-btn" data-filter="southern-africa">Southern Africa</button>
+        </div>
+
+        <p id="visibleRecipeCount" style="text-align:center; font-size:0.9rem; color:var(--text-muted); margin-bottom: 2rem;">
+          Showing 5 signature dishes
+        </p>
+
+        <!-- Dish Grid (<figure> + <figcaption>) -->
+        <div class="card-grid">
+
+          <!-- 1. Jollof Rice (West Africa) -->
+          <article class="recipe-card" data-region="west-africa">
+            <button class="btn-favorite" data-id="jollof-rice" aria-label="Save Jollof Rice to favorites">🤍</button>
+            <figure>
+              <div class="card-image-wrap">
+                <span class="card-badge">West Africa</span>
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Platter of West African smoky Jollof rice garnished with fried plantains" loading="lazy">
+              </div>
+              <figcaption class="card-body">
+                <div class="card-meta">
+                  <span>⏱️ 55 Mins</span>
+                  <span>🔥 Medium Spice</span>
+                </div>
+                <h3 class="card-title">Authentic Jollof Rice</h3>
+                <p class="card-desc">
+                  Long-grain rice slow-simmered in a rich, reduction of roasted tomatoes, sweet bell peppers, onions, and scotch bonnet chilies with a fragrant firewood aroma.
+                </p>
+                <div class="card-footer">
+                  <span style="font-weight:700; color:var(--saffron-gold);">Nigeria & Ghana</span>
+                  <a href="jollof-rice.html" class="btn btn-outline" style="padding:0.45rem 1rem; font-size:0.85rem;">View Recipe</a>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+
+          <!-- 2. Moroccan Lamb Tagine (North Africa) -->
+          <article class="recipe-card" data-region="north-africa">
+            <button class="btn-favorite" data-id="tagine" aria-label="Save Moroccan Lamb Tagine to favorites">🤍</button>
+            <figure>
+              <div class="card-image-wrap">
+                <span class="card-badge">North Africa</span>
+                <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=800&q=80" alt="Traditional Moroccan clay tagine pot with braised lamb, apricots, and toasted almonds" loading="lazy">
+              </div>
+              <figcaption class="card-body">
+                <div class="card-meta">
+                  <span>⏱️ 1 hr 45 Mins</span>
+                  <span>🍯 Warm & Aromatic</span>
+                </div>
+                <h3 class="card-title">Moroccan Lamb Tagine</h3>
+                <p class="card-desc">
+                  Tender pasture-raised lamb braised in an earthen conical tagine with sun-dried apricots, golden prunes, toasted almonds, and Ras el Hanout spices.
+                </p>
+                <div class="card-footer">
+                  <span style="font-weight:700; color:var(--saffron-gold);">Morocco</span>
+                  <a href="tagine.html" class="btn btn-outline" style="padding:0.45rem 1rem; font-size:0.85rem;">View Recipe</a>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+
+          <!-- 3. Ethiopian Injera & Doro Wat (East Africa) -->
+          <article class="recipe-card" data-region="east-africa">
+            <button class="btn-favorite" data-id="injera" aria-label="Save Ethiopian Injera to favorites">🤍</button>
+            <figure>
+              <div class="card-image-wrap">
+                <span class="card-badge">East Africa</span>
+                <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=800&q=80" alt="Fermented Ethiopian sourdough teff flatbread served with rich spiced chicken stew" loading="lazy">
+              </div>
+              <figcaption class="card-body">
+                <div class="card-meta">
+                  <span>⏱️ 3 Days Ferment</span>
+                  <span>🌶️ Rich Berbere</span>
+                </div>
+                <h3 class="card-title">Injera with Doro Wat</h3>
+                <p class="card-desc">
+                  Spongy fermented flatbread made from ancient nutrient-dense teff grain, served as an edible platter for rich, aromatic berbere-spiced chicken stew.
+                </p>
+                <div class="card-footer">
+                  <span style="font-weight:700; color:var(--saffron-gold);">Ethiopia & Eritrea</span>
+                  <a href="injera.html" class="btn btn-outline" style="padding:0.45rem 1rem; font-size:0.85rem;">View Recipe</a>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+
+          <!-- 4. Rwandan Isombe (East/Central Africa) -->
+          <article class="recipe-card" data-region="east-africa">
+            <button class="btn-favorite" data-id="isombe" aria-label="Save Rwandan Isombe to favorites">🤍</button>
+            <figure>
+              <div class="card-image-wrap">
+                <span class="card-badge">East Africa</span>
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" alt="Rwandan Isombe dish made of pounded cassava leaves with smooth peanut paste" loading="lazy">
+              </div>
+              <figcaption class="card-body">
+                <div class="card-meta">
+                  <span>⏱️ 1 hr 15 Mins</span>
+                  <span>🥜 Savory & Earthy</span>
+                </div>
+                <h3 class="card-title">Rwandan Isombe</h3>
+                <p class="card-desc">
+                  Finely pounded young cassava leaves slowly simmered with aubergines, spring leeks, and roasted peanut paste, creating a deeply comforting Rwandan staple.
+                </p>
+                <div class="card-footer">
+                  <span style="font-weight:700; color:var(--saffron-gold);">Rwanda</span>
+                  <a href="isombe.html" class="btn btn-outline" style="padding:0.45rem 1rem; font-size:0.85rem;">View Recipe</a>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+
+          <!-- 5. South African Bunny Chow (Southern Africa) -->
+          <article class="recipe-card" data-region="southern-africa">
+            <button class="btn-favorite" data-id="bunny-chow" aria-label="Save South African Bunny Chow to favorites">🤍</button>
+            <figure>
+              <div class="card-image-wrap">
+                <span class="card-badge">Southern Africa</span>
+                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80" alt="Hollowed loaf of crusty white bread filled to the brim with Durban lamb curry" loading="lazy">
+              </div>
+              <figcaption class="card-body">
+                <div class="card-meta">
+                  <span>⏱️ 50 Mins</span>
+                  <span>🔥 Bold Durban Curry</span>
+                </div>
+                <h3 class="card-title">Durban Bunny Chow</h3>
+                <p class="card-desc">
+                  A hollowed crusty loaf of artisanal white bread filled to overflowing with fragrant, deeply spiced Durban mutton curry, topped with spicy pickled sambals.
+                </p>
+                <div class="card-footer">
+                  <span style="font-weight:700; color:var(--saffron-gold);">South Africa</span>
+                  <a href="bunny-chow.html" class="btn btn-outline" style="padding:0.45rem 1rem; font-size:0.85rem;">View Recipe</a>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore by Region Section -->
+    <section class="section section-muted" aria-labelledby="regionsTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="tagline">Terroirs & Foodways</span>
+          <h2 id="regionsTitle">Explore by Culinary Region</h2>
+          <p>Every corner of the African continent tells a unique story through indigenous spices, ancient heirloom grains, and regional cooking rituals.</p>
+        </div>
+
+        <div class="card-grid">
+
+          <a href="regions.html#west-africa" class="region-card" aria-label="Explore West African Culinary Culture">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Vibrant red stew and grains of West Africa" loading="lazy">
+            <div class="region-overlay">
+              <span class="pill-badge" style="background:var(--primary-terracotta); margin-bottom:0.5rem;">West Africa</span>
+              <h3>The Land of Bold Red Sauces</h3>
+              <p>Known for pungent dawadawa, fiery scotch bonnets, fermented locust beans, and celebratory rice traditions.</p>
+              <span style="font-weight:700; color:#FFFFFF;">Discover West Africa →</span>
+            </div>
+          </a>
+
+          <a href="regions.html#east-africa" class="region-card" aria-label="Explore East African Culinary Culture">
+            <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=800&q=80" alt="Aromatic stews and sourdough flatbreads of East Africa" loading="lazy">
+            <div class="region-overlay">
+              <span class="pill-badge" style="background:var(--saffron-gold); margin-bottom:0.5rem;">East Africa</span>
+              <h3>Highland Grains & Coastal Spices</h3>
+              <p>From Ethiopian sourdough injera to the Swahili coconut-infused curries along the Indian Ocean coast.</p>
+              <span style="font-weight:700; color:#FFFFFF;">Discover East Africa →</span>
+            </div>
+          </a>
+
+          <a href="regions.html#north-africa" class="region-card" aria-label="Explore North African Culinary Culture">
+            <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=800&q=80" alt="Moroccan spices and tagines of North Africa" loading="lazy">
+            <div class="region-overlay">
+              <span class="pill-badge" style="background:var(--moringa-green); margin-bottom:0.5rem;">North Africa</span>
+              <h3>Maghrebi Earth & Sweetness</h3>
+              <p>Masterful symphonies of preserved lemons, sweet dried fruits, hand-rolled couscous, and Ras el Hanout.</p>
+              <span style="font-weight:700; color:#FFFFFF;">Discover North Africa →</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Food Trends Section (<article> & <mark>) -->
+    <section class="section" aria-labelledby="trendsTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="tagline">Contemporary African Foodways</span>
+          <h2 id="trendsTitle">Latest Food Trends & Culinary News</h2>
+          <p>How African chefs and diaspora innovators are revolutionizing global fine dining and sustainable agriculture.</p>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="trend-card">
+            <div class="trend-meta">
+              <span>🌾 Superfoods</span>
+              <span>•</span>
+              <time datetime="2026-10-24">October 24, 2026</time>
+            </div>
+            <h3 class="trend-title">The Global Rediscovery of Fonio and Ancient Teff</h3>
+            <p>
+              Nutritionists worldwide are hailing <mark>Fonio</mark>, Africa’s oldest cultivated cereal, as an drought-resilient supergrain with a low glycemic index. In Dakar and Paris, pastry chefs are substituting conventional wheat with gluten-free <mark>Ethiopian Teff flour</mark> to achieve nutty, prebiotic-dense delicacies.
+            </p>
+            <p style="margin-top:auto; font-weight:600; font-size:0.9rem; color:var(--primary-terracotta);">
+              Tagged: <mark>Ancient Grains</mark>, Climate Resilient Crops
+            </p>
+          </article>
+
+          <article class="trend-card">
+            <div class="trend-meta">
+              <span>🏺 Fermentation</span>
+              <span>•</span>
+              <time datetime="2026-10-18">October 18, 2026</time>
+            </div>
+            <h3 class="trend-title">Fermentation Revival: Dawadawa and Iru in Modern Umami</h3>
+            <p>
+              Celebrated chefs across Lagos and London are celebrating traditional <mark>fermented locust beans (Iru/Dawadawa)</mark> as nature's ultimate umami seasoning. Packed with natural glutamates and digestive enzymes, this ancient ferment is transforming modern plant-forward gastronomy.
+            </p>
+            <p style="margin-top:auto; font-weight:600; font-size:0.9rem; color:var(--primary-terracotta);">
+              Tagged: <mark>Fermentation</mark>, Umami Flavor Science
+            </p>
+          </article>
+
+          <article class="trend-card">
+            <div class="trend-meta">
+              <span>🌶️ Spice Heritage</span>
+              <span>•</span>
+              <time datetime="2026-10-09">October 09, 2026</time>
+            </div>
+            <h3 class="trend-title">Artisanal Piri-Piri and Suya Blends Take Over Street Food</h3>
+            <p>
+              Smoky West African <mark>Suya pepper (Yaji)</mark>—blended with roasted peanut powder, ginger, chili, and ground alligator pepper—is commanding center stage in global urban street food festivals, inspiring cross-cultural barbecue collaborations from Johannesburg to New York.
+            </p>
+            <p style="margin-top:auto; font-weight:600; font-size:0.9rem; color:var(--primary-terracotta);">
+              Tagged: <mark>Suya Yaji</mark>, Diaspora Street Food
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="color:#FFFFFF; margin-bottom:1rem; display:inline-flex;">
+            <span class="brand-icon">🍲</span>
+            <span>Tastes of Africa</span>
+          </a>
+          <p style="color:#A89C90; font-size:0.95rem;">
+            Honoring the culinary roots, agricultural wisdom, and generational hospitality of the African continent.
+          </p>
+          <div style="font-size:0.85rem; color:#78716C; margin-top:1rem;">
+            Designed with semantic HTML5, modern CSS, and vanilla DOM manipulation.
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Culinary Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">All Recipes</a></li>
+            <li><a href="regions.html">Culinary Regions</a></li>
+            <li><a href="about.html">About Our Mission</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Signature Dishes</h4>
+          <ul class="footer-links">
+            <li><a href="jollof-rice.html">West African Jollof Rice</a></li>
+            <li><a href="tagine.html">Moroccan Lamb Tagine</a></li>
+            <li><a href="injera.html">Ethiopian Injera & Doro Wat</a></li>
+            <li><a href="isombe.html">Rwandan Cassava Isombe</a></li>
+            <li><a href="bunny-chow.html">Durban Bunny Chow</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Taste Club Newsletter</h4>
+          <p style="color:#A89C90; font-size:0.9rem;">
+            Receive hand-tested monthly regional recipes, spice sourcing guides, and cultural food stories.
+          </p>
+          <form class="newsletter-form" aria-label="Subscribe to monthly recipes newsletter">
+            <label for="footerEmailInput" class="visually-hidden" style="display:none;">Email address</label>
+            <input type="email" id="footerEmailInput" placeholder="your.name@alustudent.com" required>
+            <button type="submit" class="btn btn-primary" style="padding:0.65rem 1.25rem;">Join</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Tastes of Africa Project. Celebrating Pan-African Gastronomy & Culture.</p>
+        <p>Built for African Leadership University (ALU) Formative Assessment.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

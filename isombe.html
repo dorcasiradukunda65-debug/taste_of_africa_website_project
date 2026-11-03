@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Authentic Rwandan Isombe recipe: Pounded tender cassava leaves simmered with aubergines, spring leeks, and roasted peanut butter.">
+  <title>Rwandan Isombe Recipe | Tastes of Africa</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥬</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-icon">🍲</span>
+        <span>Tastes of Africa</span>
+      </a>
+
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation">☰</button>
+
+      <nav role="navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="recipes.html" class="nav-link active">Recipes</a></li>
+          <li><a href="regions.html" class="nav-link">Culinary Regions</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="btn-icon" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- Recipe Hero Header -->
+    <section class="recipe-header-hero">
+      <div class="container recipe-header-grid">
+        <div class="recipe-hero-text">
+          <nav aria-label="Breadcrumb" style="margin-bottom: 1rem; font-size: 0.85rem; color: var(--text-muted);">
+            <a href="index.html">Home</a> / <a href="recipes.html">Recipes</a> / <span>Rwandan Isombe</span>
+          </nav>
+          <span class="pill-badge" style="background:var(--moringa-light); color:var(--moringa-green); margin-bottom: 0.75rem; display:inline-block;">
+            Land of a Thousand Hills
+          </span>
+          <h1>Traditional Rwandan Isombe</h1>
+          <p>
+            The quintessential comfort food of Rwanda. Tender young cassava leaves pounded in a wooden mortar (iseke), slow-boiled with green leeks, sweet aubergines, and aromatic beef bone broth, enriched with creamy roasted groundnut (peanut) paste.
+          </p>
+
+          <div class="recipe-quick-stats">
+            <div class="stat-item">
+              <span class="stat-label">Prep Time</span>
+              <span class="stat-value">30 Mins</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Simmer Time</span>
+              <span class="stat-value">1 hr 15 Mins</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Origin</span>
+              <span class="stat-value">Rwanda / East Africa</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Profile</span>
+              <span class="stat-value">🥜 Earthy & Creamy</span>
+            </div>
+          </div>
+
+          <!-- Favorite Button -->
+          <div style="display:flex; align-items:center; gap: 1rem;">
+            <button class="btn btn-outline btn-favorite" data-id="isombe" style="position:static; width:auto; height:auto; padding:0.6rem 1.25rem; border-radius:var(--radius-full);">
+              🤍 Save to Favorites
+            </button>
+            <span style="font-size:0.9rem; color:var(--text-muted);">Saved recipes persist across visits</span>
+          </div>
+        </div>
+
+        <div class="recipe-hero-image">
+          <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1000&q=80" alt="Pot of Rwandan Isombe cassava leaves cooked with peanuts" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content & Cooking Instructions -->
+    <section class="section">
+      <div class="container recipe-content-grid">
+
+        <!-- Left Column: Scalable Ingredients & Cultural Background -->
+        <aside class="recipe-sidebar">
+
+          <!-- Servings Scaler (DOM Interactive) -->
+          <div class="servings-scaler" id="servingsScaler">
+            <span style="font-weight:600; font-size:0.9rem;">Adjust Servings:</span>
+            <button type="button" class="scaler-btn" id="decreaseServings" aria-label="Decrease servings">-</button>
+            <span class="servings-count" id="servingsCount" data-base-servings="6">6 Servings</span>
+            <button type="button" class="scaler-btn" id="increaseServings" aria-label="Increase servings">+</button>
+          </div>
+
+          <!-- Ingredients Box -->
+          <div class="ingredients-box">
+            <h3>Ingredients List</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted);">Quantities scale dynamically with the buttons above.</p>
+
+            <ul class="ingredients-list">
+              <li>
+                <span>Young cassava leaves (finely pounded / Sombe)</span>
+                <strong><span class="ingredient-qty" data-base="1">1</span> kg</strong>
+              </li>
+              <li>
+                <span>Pure roasted peanut butter (smooth / unflavored)</span>
+                <strong><span class="ingredient-qty" data-base="0.75">¾</span> cup</strong>
+              </li>
+              <li>
+                <span>Large leeks (white and pale green parts, sliced)</span>
+                <strong><span class="ingredient-qty" data-base="2">2</span> stalks</strong>
+              </li>
+              <li>
+                <span>Purple eggplants (peeled and diced)</span>
+                <strong><span class="ingredient-qty" data-base="2">2</span> medium</strong>
+              </li>
+              <li>
+                <span>Green bell peppers (finely chopped)</span>
+                <strong><span class="ingredient-qty" data-base="2">2</span> whole</strong>
+              </li>
+              <li>
+                <span>Garlic cloves (crushed)</span>
+                <strong><span class="ingredient-qty" data-base="5">5</span> cloves</strong>
+              </li>
+              <li>
+                <span>Rich bone broth or smoked dried fish</span>
+                <strong><span class="ingredient-qty" data-base="3">3</span> cups</strong>
+              </li>
+              <li>
+                <span>Red palm oil or sunflower oil</span>
+                <strong><span class="ingredient-qty" data-base="3">3</span> tbsp</strong>
+              </li>
+              <li>
+                <span>Spring onions (chopped)</span>
+                <strong><span class="ingredient-qty" data-base="1">1</span> bunch</strong>
+              </li>
+              <li>
+                <span>Sea salt and black pepper</span>
+                <strong>To taste</strong>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cultural History Box -->
+          <div style="margin-top: 2rem; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem;">
+            <h4 style="margin-bottom:0.75rem; color:var(--moringa-green);">Heart of the Thousand Hills</h4>
+            <p style="font-size:0.95rem; line-height: 1.6;">
+              In Rwandan households and festive gatherings, <mark>Isombe</mark> is always prepared with reverence. Young cassava leaves are harvested fresh from terraced hillsides, meticulously washed, and pounded into a fine emerald paste. It is traditionally paired with boiled green plantains (Igitoki) or steamed sweet potatoes.
+            </p>
+          </div>
+        </aside>
+
+        <!-- Right Column: Step-by-Step Instructions & Media -->
+        <article class="instructions-section">
+          <h2>Cooking Instructions</h2>
+          <p>Traditional technique for tenderizing cassava greens and incorporating the groundnut cream.</p>
+
+          <details open>
+            <summary>Step 1: Prep and Pound the Cassava Leaves</summary>
+            <div class="step-content">
+              <p>
+                Rinse the fresh young cassava leaves several times in cold water to remove soil. Place small batches into a large wooden mortar and pestle (iseke) and pound thoroughly until reduced to a fine, shred-free green pulp.
+              </p>
+            </div>
+          </details>
+
+          <details open>
+            <summary>Step 2: Initial Boil with Aromatics</summary>
+            <div class="step-content">
+              <p>
+                Transfer the pounded cassava greens into a large pot. Add 4 cups of water or bone broth, diced eggplants, chopped leeks, and bell peppers. Bring to a rapid boil, reduce heat to medium-low, and simmer uncovered for 45 minutes until the bitterness mellows and greens soften.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Step 3: Sauté the Garlic and Seasoning</summary>
+            <div class="step-content">
+              <p>
+                In a separate skillet, warm the palm oil over medium heat. Sauté the crushed garlic and spring onions for 3 minutes until aromatic. Pour the seasoned oil into the bubbling cassava pot and stir thoroughly to distribute the flavors.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Step 4: Incorporate the Roasted Peanut Paste</summary>
+            <div class="step-content">
+              <p>
+                In a bowl, dilute the roasted peanut paste with ½ cup of warm broth until smooth and pourable. Stir the peanut cream into the Isombe. Reduce the flame to low and simmer gently for 25 minutes, stirring frequently so the bottom does not scorch. The sauce will turn silky, rich, and deeply fragrant.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Step 5: Traditional Serving Accompaniments</summary>
+            <div class="step-content">
+              <p>
+                Ladle the warm Isombe onto wide serving platters alongside freshly steamed green matooke plantains (Igitoki), boiled cassava tubers, or Rwandan white rice.
+              </p>
+            </div>
+          </details>
+
+          <!-- Video Tutorial -->
+          <div style="margin-top: 3rem;">
+            <h3>Video Tutorial</h3>
+            <p>Watch how authentic Rwandan Isombe is prepared in Kigali:</p>
+            <div class="video-responsive-wrapper">
+              <iframe 
+                src="https://www.youtube-nocookie.com/embed/p17H5T541-Q" 
+                title="How to make authentic Rwandan Isombe" 
+                allowfullscreen 
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Nutritional Facts Table -->
+          <div style="margin-top: 3rem;">
+            <h3>Nutritional Facts</h3>
+            <p>Estimated nutritional profile per serving (1 generous bowl of Isombe):</p>
+            <div class="table-responsive">
+              <table class="nutrition-table">
+                <thead>
+                  <tr>
+                    <th>Nutrient</th>
+                    <th>Amount per Serving</th>
+                    <th>% Daily Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Calories</td>
+                    <td>310 kcal</td>
+                    <td>16%</td>
+                  </tr>
+                  <tr>
+                    <td>Protein (High Plant Protein)</td>
+                    <td>14 g</td>
+                    <td>28%</td>
+                  </tr>
+                  <tr>
+                    <td>Dietary Fiber</td>
+                    <td>9.4 g</td>
+                    <td>38%</td>
+                  </tr>
+                  <tr>
+                    <td>Vitamin A</td>
+                    <td>1,240 mcg</td>
+                    <td>138%</td>
+                  </tr>
+                  <tr>
+                    <td>Vitamin C</td>
+                    <td>68 mg</td>
+                    <td>75%</td>
+                  </tr>
+                  <tr>
+                    <td>Iron</td>
+                    <td>5.1 mg</td>
+                    <td>28%</td>
+                  </tr>
+                  <tr>
+                    <td>Healthy Fats (from Peanuts)</td>
+                    <td>18 g</td>
+                    <td>23%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Country of Origin Map -->
+          <div style="margin-top: 3rem;">
+            <h3>Country of Origin</h3>
+            <p>Republic of Rwanda in Central/East Africa:</p>
+            <div class="map-container">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2041285.877685605!2d29.5!3d-1.940278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19c29654e73840e3%3A0x7490b026cb3edd87!2sRwanda!5e0!3m2!1sen!2srw!4v1700000000000!5m2!1sen!2srw" 
+                title="Map of Rwanda" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 Tastes of Africa Project. Authentic Recipe Series.</p>
+        <p><a href="recipes.html" style="color:var(--saffron-gold);">← Back to All Recipes</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

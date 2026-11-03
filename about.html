@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Tastes of Africa - Our mission to document, celebrate, and preserve Africa's rich gastronomic heritage, ancestral agricultural wisdom, and culinary diaspora.">
+  <title>About Us | Tastes of Africa Project</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Tastes of Africa Homepage">
+        <span class="brand-icon" aria-hidden="true">🍲</span>
+        <span>Tastes of Africa</span>
+      </a>
+
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="recipes.html" class="nav-link">Recipes</a></li>
+          <li><a href="regions.html" class="nav-link">Culinary Regions</a></li>
+          <li><a href="about.html" class="nav-link active">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="recipes.html" class="btn-icon" title="View Saved Favorites" aria-label="View Saved Favorites">
+          ❤️<span id="favoritesCountBadge" class="pill-badge" style="display:none; font-size:0.7rem; padding: 2px 6px; margin-left: 2px;">0</span>
+        </a>
+        <button id="themeToggleBtn" class="btn-icon" aria-label="Toggle dark and light theme">
+          🌙
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- About Header Hero -->
+    <section class="section-muted" style="padding-block: 4rem 2.5rem; border-bottom: 1px solid var(--border-color);">
+      <div class="container text-center" style="text-align: center;">
+        <span class="pill-badge" style="background:var(--primary-light); color:var(--primary-terracotta); margin-bottom: 1rem; display:inline-block;">
+          ✨ Our Story & Cultural Mission
+        </span>
+        <h1>Celebrating Africa's Living Food Heritage</h1>
+        <p style="max-width: 720px; margin-inline: auto; font-size: 1.15rem;">
+          We are dedicated to documenting authentic recipes, preserving indigenous foodways, and amplifying the voices of African cooks, farmers, and culinary storytellers worldwide.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mission Statement Section -->
+    <section class="section">
+      <div class="container">
+        <div style="display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 3.5rem; align-items:center;">
+          <div>
+            <span class="tagline" style="color:var(--primary-terracotta); text-transform:uppercase; font-weight:700; letter-spacing:0.1em; font-size:0.85rem; display:inline-block; margin-bottom:0.5rem;">
+              Our Core Purpose
+            </span>
+            <h2>Bridging History, Memory, and the Dining Table</h2>
+            <p>
+              Food is more than sustenance—it is an oral archive of African resilience, ingenuity, and community. For centuries, ancestral cooking wisdom was shared orally from grandmother to mother to child across hearths, clay ovens, and open fires.
+            </p>
+            <p>
+              <mark>The "Tastes of Africa" project</mark> was founded to archive these sacred regional traditions in digital form. We meticulously record precise measurements, fermentation biology, spice chemistry, and cultural ceremonies so that Africa’s food heritage continues to thrive and inspire generations across the globe.
+            </p>
+            <blockquote style="border-left: 4px solid var(--saffron-gold); padding: 1rem 1.5rem; background: var(--bg-subtle); border-radius: var(--radius-sm); margin-block: 1.5rem; font-style: italic; color: var(--text-primary);">
+              "To eat African food is to partake in a communion with the soil, the seasons, and millennia of unbroken human kinship."
+            </blockquote>
+          </div>
+
+          <div>
+            <div style="border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-lg);">
+              <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=1000&q=80" alt="Communal African dining with fresh flatbreads and rich stews" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Historical Timeline Section (<article>) -->
+    <section class="section section-muted">
+      <div class="container">
+        <div class="section-header">
+          <span class="tagline">Historical Journey</span>
+          <h2>A Brief History of African Gastronomy & Global Influence</h2>
+          <p>Tracing the evolution of indigenous African crops and their profound impact on world cuisine.</p>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="trend-card">
+            <div class="trend-meta">
+              <span>🌾 5,000 BCE</span>
+              <span>• Ancient Origins</span>
+            </div>
+            <h3 class="trend-title">Domestication of Ancient Staples</h3>
+            <p>
+              Indigenous African agriculturalists domesticated <mark>Sorghum, Pearl Millet, Fonio, African Rice (Oryza glaberrima), and Teff</mark>. These climate-resilient cereals sustained great civilizations in ancient Nubia, Great Zimbabwe, and the Mali Empire without chemical dependency.
+            </p>
+          </article>
+
+          <article class="trend-card">
+            <div class="trend-meta">
+              <span>⛵ 800–1500 CE</span>
+              <span>• Maritime Trade</span>
+            </div>
+            <h3 class="trend-title">The Swahili Spice Monsoon Routes</h3>
+            <p>
+              Dhow trade along the East African coast synthesized Indian, Arab, and Persian trade goods with Bantu culinary foundations. Cloves, cardamom, cinnamon, and coconut cream permanently enriched coastal Swahili gastronomy from Zanzibar to Mombasa.
+            </p>
+          </article>
+
+          <article class="trend-card">
+            <div class="trend-meta">
+              <span>🌎 1600s–Present</span>
+              <span>• Diaspora Legacy</span>
+            </div>
+            <h3 class="trend-title">The Transatlantic Culinary Diaspora</h3>
+            <p>
+              Enslaved African agriculturalists carried seeds of <mark>Okra (Gumbo), Black-eyed peas, Yams, and Sesame (Benne)</mark> across the Atlantic. Their techniques laid the very foundations of American Southern Soul Food, Brazilian Feijoada, and Caribbean Jerk cookery.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Cultural Food Landmark Section (Embedded Google Map) -->
+    <section class="section" aria-labelledby="landmarkTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="tagline">Culinary Heritage Landmark</span>
+          <h2 id="landmarkTitle">Historic Cultural Food Hub: Stone Town Spice Market</h2>
+          <p>
+            Visit the historic epicenter of African spice commerce—Zanzibar's Darajani Market, where vanilla, nutmeg, cloves, and ginger have traded for over eight centuries.
+          </p>
+        </div>
+
+        <div style="background:var(--bg-surface); border:1px solid var(--border-color); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-md); padding:2rem;">
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:2.5rem; align-items:center; margin-bottom:1.5rem;">
+            <div>
+              <h3>Darajani Bazaar (Stone Town, Zanzibar)</h3>
+              <p>
+                Known as the "Spice Island", Zanzibar remains one of the world's most evocative food landmarks. Freshly harvested cloves, aromatic cinnamon quills, dried bird's eye chilies, and lemongrass arrive daily from rural shamba plantations.
+              </p>
+              <ul style="list-style:none; padding:0; margin-top:1rem; color:var(--text-secondary); font-size:0.95rem;">
+                <li style="margin-bottom:0.5rem;">📍 <strong>Location:</strong> Stone Town, Zanzibar, Tanzania</li>
+                <li style="margin-bottom:0.5rem;">🌶️ <strong>Key Spices:</strong> Cloves, Cardamom, Nutmeg, Saffron, Black Pepper</li>
+                <li>🏛️ <strong>Heritage Status:</strong> UNESCO World Heritage Cultural Route</li>
+              </ul>
+            </div>
+            <div style="border-radius:var(--radius-md); overflow:hidden; height:240px;">
+              <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=80" alt="Vibrant spice stalls in African traditional market" style="width:100%; height:100%; object-fit:cover;" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Embedded Google Map -->
+          <div class="map-container" style="height:380px;">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.083838520286!2d39.1915444!3d-6.1627447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185cd05bcece9e51%3A0xe9684c56da3fa0c5!2sDarajani%20Market!5e0!3m2!1sen!2srw!4v1700000000000!5m2!1sen!2srw" 
+              title="Google Map showing Stone Town Darajani Spice Market in Zanzibar" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="color:#FFFFFF; margin-bottom:1rem; display:inline-flex;">
+            <span class="brand-icon">🍲</span>
+            <span>Tastes of Africa</span>
+          </a>
+          <p style="color:#A89C90; font-size:0.95rem;">
+            Preserving indigenous recipes, culinary oral histories, and community traditions across Africa.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes Directory</a></li>
+            <li><a href="regions.html">Regional Foodways</a></li>
+            <li><a href="about.html">About Project</a></li>
+            <li><a href="contact.html">Get in Touch</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Recipes</h4>
+          <ul class="footer-links">
+            <li><a href="jollof-rice.html">Jollof Rice</a></li>
+            <li><a href="tagine.html">Moroccan Tagine</a></li>
+            <li><a href="injera.html">Ethiopian Injera</a></li>
+            <li><a href="isombe.html">Rwandan Isombe</a></li>
+            <li><a href="bunny-chow.html">Bunny Chow</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p style="color:#A89C90; font-size:0.9rem;">
+            Subscribe to receive our seasonal food heritage journals.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="your.email@alustudent.com" required>
+            <button type="submit" class="btn btn-primary" style="padding:0.65rem 1.25rem;">Join</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Tastes of Africa Project. African Leadership University Formative Assignment.</p>
+        <p><a href="index.html" style="color:var(--saffron-gold);">← Back to Home</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

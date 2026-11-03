@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Authentic Moroccan Lamb Tagine recipe: Slow-braised pasture lamb with sweet apricots, prunes, almonds, and Ras el Hanout spices.">
+  <title>Moroccan Lamb Tagine Recipe | Tastes of Africa</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏺</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-icon">🍲</span>
+        <span>Tastes of Africa</span>
+      </a>
+
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation">☰</button>
+
+      <nav role="navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="recipes.html" class="nav-link active">Recipes</a></li>
+          <li><a href="regions.html" class="nav-link">Culinary Regions</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="btn-icon" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- Recipe Hero Header -->
+    <section class="recipe-header-hero">
+      <div class="container recipe-header-grid">
+        <div class="recipe-hero-text">
+          <nav aria-label="Breadcrumb" style="margin-bottom: 1rem; font-size: 0.85rem; color: var(--text-muted);">
+            <a href="index.html">Home</a> / <a href="recipes.html">Recipes</a> / <span>Moroccan Tagine</span>
+          </nav>
+          <span class="pill-badge" style="background:var(--saffron-light); color:var(--clove-brown); margin-bottom: 0.75rem; display:inline-block;">
+            North African Maghreb Heritage
+          </span>
+          <h1>Moroccan Lamb Tagine with Apricots</h1>
+          <p>
+            An ancient Berber culinary tradition. Tender lamb shank braised in a conical clay vessel with sweet Turkish apricots, golden prunes, toasted almonds, honey, and the aromatic warmth of 27-spice Ras el Hanout.
+          </p>
+
+          <div class="recipe-quick-stats">
+            <div class="stat-item">
+              <span class="stat-label">Prep Time</span>
+              <span class="stat-value">25 Mins</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Cook Time</span>
+              <span class="stat-value">1 hr 45 Mins</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Origin</span>
+              <span class="stat-value">Morocco / Maghreb</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Flavor</span>
+              <span class="stat-value">🍯 Sweet & Savory</span>
+            </div>
+          </div>
+
+          <!-- Favorite Button -->
+          <div style="display:flex; align-items:center; gap: 1rem;">
+            <button class="btn btn-outline btn-favorite" data-id="tagine" style="position:static; width:auto; height:auto; padding:0.6rem 1.25rem; border-radius:var(--radius-full);">
+              🤍 Save to Favorites
+            </button>
+            <span style="font-size:0.9rem; color:var(--text-muted);">Saved recipes persist across visits</span>
+          </div>
+        </div>
+
+        <div class="recipe-hero-image">
+          <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=1000&q=80" alt="Moroccan clay tagine dish featuring spiced lamb, apricots, and toasted almonds" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content & Cooking Instructions -->
+    <section class="section">
+      <div class="container recipe-content-grid">
+
+        <!-- Left Column: Scalable Ingredients & Cultural Background -->
+        <aside class="recipe-sidebar">
+
+          <!-- Servings Scaler (DOM Interactive) -->
+          <div class="servings-scaler" id="servingsScaler">
+            <span style="font-weight:600; font-size:0.9rem;">Adjust Servings:</span>
+            <button type="button" class="scaler-btn" id="decreaseServings" aria-label="Decrease servings">-</button>
+            <span class="servings-count" id="servingsCount" data-base-servings="4">4 Servings</span>
+            <button type="button" class="scaler-btn" id="increaseServings" aria-label="Increase servings">+</button>
+          </div>
+
+          <!-- Ingredients Box -->
+          <div class="ingredients-box">
+            <h3>Ingredients List</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted);">Quantities scale dynamically with the buttons above.</p>
+
+            <ul class="ingredients-list">
+              <li>
+                <span>Boneless lamb shoulder or shanks (cubed)</span>
+                <strong><span class="ingredient-qty" data-base="2">2</span> lbs</strong>
+              </li>
+              <li>
+                <span>Dried golden apricots</span>
+                <strong><span class="ingredient-qty" data-base="1">1</span> cup</strong>
+              </li>
+              <li>
+                <span>Pitted prunes</span>
+                <strong><span class="ingredient-qty" data-base="0.75">¾</span> cup</strong>
+              </li>
+              <li>
+                <span>Ras el Hanout spice blend</span>
+                <strong><span class="ingredient-qty" data-base="1.5">1.5</span> tbsp</strong>
+              </li>
+              <li>
+                <span>Ground cinnamon</span>
+                <strong><span class="ingredient-qty" data-base="1">1</span> tsp</strong>
+              </li>
+              <li>
+                <span>Ground ginger & turmeric</span>
+                <strong><span class="ingredient-qty" data-base="1">1</span> tsp each</strong>
+              </li>
+              <li>
+                <span>Saffron threads (steeped in warm water)</span>
+                <strong><span class="ingredient-qty" data-base="0.5">½</span> tsp</strong>
+              </li>
+              <li>
+                <span>Wildflower honey</span>
+                <strong><span class="ingredient-qty" data-base="2">2</span> tbsp</strong>
+              </li>
+              <li>
+                <span>Yellow onions (finely grated)</span>
+                <strong><span class="ingredient-qty" data-base="2">2</span> large</strong>
+              </li>
+              <li>
+                <span>Blanched almonds (toasted)</span>
+                <strong><span class="ingredient-qty" data-base="0.5">½</span> cup</strong>
+              </li>
+              <li>
+                <span>Extra virgin olive oil</span>
+                <strong><span class="ingredient-qty" data-base="3">3</span> tbsp</strong>
+              </li>
+              <li>
+                <span>Fresh coriander & mint</span>
+                <strong><span class="ingredient-qty" data-base="0.5">½</span> cup</strong>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cultural History Box -->
+          <div style="margin-top: 2rem; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem;">
+            <h4 style="margin-bottom:0.75rem; color:var(--saffron-gold);">The Magic of the Earthen Tagine</h4>
+            <p style="font-size:0.95rem; line-height: 1.6;">
+              The conical lid of the Moroccan <mark>Tagine</mark> traps rising condensation and returns moisture to the base, naturally braising meat in desert regions where water was traditionally precious. The hallmark blend of sweet dried fruits and savory spices reflects Andalusia and Berber intercultural synthesis.
+            </p>
+          </div>
+        </aside>
+
+        <!-- Right Column: Step-by-Step Instructions & Media -->
+        <article class="instructions-section">
+          <h2>Cooking Instructions</h2>
+          <p>Follow these traditional methods for succulent, melt-in-the-mouth Moroccan braising.</p>
+
+          <details open>
+            <summary>Step 1: Marinate the Lamb in Saffron & Spices</summary>
+            <div class="step-content">
+              <p>
+                In a large bowl, whisk together extra virgin olive oil, Ras el Hanout, ground ginger, turmeric, cinnamon, sea salt, black pepper, and the warm saffron water. Toss the cubed lamb shoulder in the spice paste until completely coated. Let rest for at least 30 minutes (or refrigerate overnight for depth).
+              </p>
+            </div>
+          </details>
+
+          <details open>
+            <summary>Step 2: Sear the Lamb and Caramelize Aromatics</summary>
+            <div class="step-content">
+              <p>
+                Heat a clay tagine or heavy enameled cast iron Dutch oven over medium heat. Sear the marinated lamb in batches for 5–7 minutes until lightly browned on all sides. Remove lamb, reduce heat to low, and add the grated onions and crushed garlic. Sauté gently until translucent and sweet.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Step 3: Slow Braise Under Conical Steam</summary>
+            <div class="step-content">
+              <p>
+                Return the lamb and its resting juices to the pot. Add 1 cup of water or vegetable broth. Secure the conical lid tightly, reduce the flame to low, and braise undisturbed for 1 hour and 15 minutes, allowing steam to continually baste the meat.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Step 4: Glaze with Honey, Apricots & Prunes</summary>
+            <div class="step-content">
+              <p>
+                In a separate small saucepan, simmer the dried apricots and prunes with 2 tablespoons of honey, a pinch of cinnamon, and ½ cup of braising liquid for 8 minutes until plump and glossy. Uncover the tagine, arrange the glistening fruits over the lamb, and simmer for an additional 15 minutes to thicken the sauce.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Step 5: Garnish and Communal Service</summary>
+            <div class="step-content">
+              <p>
+                Scatter freshly toasted golden almonds and chopped coriander over the tagine. Serve steaming hot directly from the clay vessel with warm crusty Khobz bread or steamed couscous to soak up the amber gravy.
+              </p>
+            </div>
+          </details>
+
+          <!-- Video Tutorial -->
+          <div style="margin-top: 3rem;">
+            <h3>Video Tutorial</h3>
+            <p>Experience an authentic Moroccan kitchen demonstration on tagine seasoning and assembly:</p>
+            <div class="video-responsive-wrapper">
+              <iframe 
+                src="https://www.youtube-nocookie.com/embed/Pj1Gj575t0M" 
+                title="Traditional Moroccan Lamb Tagine Recipe Tutorial" 
+                allowfullscreen 
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Nutritional Facts Table -->
+          <div style="margin-top: 3rem;">
+            <h3>Nutritional Facts</h3>
+            <p>Estimated nutritional values per serving (based on 1 generous portion with dried fruits):</p>
+            <div class="table-responsive">
+              <table class="nutrition-table">
+                <thead>
+                  <tr>
+                    <th>Nutrient</th>
+                    <th>Amount per Serving</th>
+                    <th>% Daily Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Calories</td>
+                    <td>510 kcal</td>
+                    <td>26%</td>
+                  </tr>
+                  <tr>
+                    <td>Protein</td>
+                    <td>42 g</td>
+                    <td>84%</td>
+                  </tr>
+                  <tr>
+                    <td>Total Fat</td>
+                    <td>22 g</td>
+                    <td>28%</td>
+                  </tr>
+                  <tr>
+                    <td>Carbohydrates</td>
+                    <td>38 g</td>
+                    <td>14%</td>
+                  </tr>
+                  <tr>
+                    <td>Dietary Fiber</td>
+                    <td>5.5 g</td>
+                    <td>22%</td>
+                  </tr>
+                  <tr>
+                    <td>Potassium</td>
+                    <td>740 mg</td>
+                    <td>16%</td>
+                  </tr>
+                  <tr>
+                    <td>Iron</td>
+                    <td>4.2 mg</td>
+                    <td>23%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Country of Origin Map -->
+          <div style="margin-top: 3rem;">
+            <h3>Country of Origin</h3>
+            <p>Historic heartland of the Kingdom of Morocco and the High Atlas Mountains:</p>
+            <div class="map-container">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408801.4429739553!2d-9.7424263!3d31.791702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b88619651c58d%3A0xd9d39381c42cffc3!2sMorocco!5e0!3m2!1sen!2srw!4v1700000000000!5m2!1sen!2srw" 
+                title="Map of Morocco" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 Tastes of Africa Project. Authentic Recipe Series.</p>
+        <p><a href="recipes.html" style="color:var(--saffron-gold);">← Back to All Recipes</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
