@@ -220,8 +220,11 @@ mark {
   border-radius: var(--radius-sm);
   display: grid;
   place-items: center;
-  font-size: 1.2rem;
   box-shadow: 0 4px 10px rgba(194, 65, 12, 0.3);
+}
+
+.brand-icon svg {
+  display: block;
 }
 
 .nav-menu {
@@ -532,29 +535,51 @@ mark {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(6px);
   border: 1px solid rgba(0, 0, 0, 0.08);
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.35rem;
+  height: 2.35rem;
   border-radius: var(--radius-full);
   display: grid;
   place-items: center;
-  font-size: 1.15rem;
+  color: var(--text-secondary);
   cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   z-index: 2;
 }
 
+.btn-favorite svg {
+  display: block;
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
+
 .btn-favorite:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
   background: #FFFFFF;
+  color: var(--primary-terracotta);
 }
 
 .btn-favorite.is-favorite {
   background: #FEE2E2;
   border-color: #F87171;
-  color: var(--paprika-red);
+  color: #DC2626;
+}
+
+.btn-favorite.is-favorite svg {
+  fill: #DC2626;
+  stroke: #DC2626;
+}
+
+.btn-with-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: auto;
+  height: auto;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.9rem;
 }
 
 .card-body {

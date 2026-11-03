@@ -13,6 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
   initNewsletterForm();
 });
 
+/* --- Clean SVG Icons (Zero Emojis) --- */
+const ICONS = {
+  sun: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`,
+  moon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`,
+  heartOutline: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>`,
+  heartFilled: `<svg width="18" height="18" viewBox="0 0 24 24" fill="#DC2626" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>`
+};
+
 /* ==========================================================================
    1. Theme Toggle (Dark / Light Mode) with LocalStorage
    ========================================================================== */
@@ -20,7 +28,6 @@ function initThemeToggle() {
   const themeToggleBtn = document.getElementById('themeToggleBtn');
   if (!themeToggleBtn) return;
 
-  // Retrieve existing preference or system default
   const savedTheme = localStorage.getItem('toa_theme') || 
     (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
@@ -36,7 +43,7 @@ function initThemeToggle() {
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     themeToggleBtn.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
-    themeToggleBtn.innerHTML = theme === 'dark' ? '☀️' : '🌙';
+    themeToggleBtn.innerHTML = theme === 'dark' ? ICONS.sun : ICONS.moon;
   }
 }
 
@@ -54,7 +61,6 @@ function initMobileNav() {
     toggleBtn.innerHTML = isOpen ? '✕' : '☰';
   });
 
-  // Close when clicking outside on mobile
   document.addEventListener('click', (e) => {
     if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target) && navMenu.classList.contains('is-open')) {
       navMenu.classList.remove('is-open');
@@ -76,14 +82,12 @@ function initRecipeFiltering() {
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Update active button state
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
       const selectedRegion = btn.getAttribute('data-filter');
       let visibleCount = 0;
 
-      // Loop through recipe cards and show/hide
       recipeCards.forEach(card => {
         const cardRegion = card.getAttribute('data-region');
         const matches = selectedRegion === 'all' || cardRegion === selectedRegion;
@@ -99,7 +103,7 @@ function initRecipeFiltering() {
       });
 
       if (countIndicator) {
-        countIndicator.textContent = `Showing ${visibleCount} delicious dish${visibleCount === 1 ? '' : 'es'}`;
+        countIndicator.textContent = `Showing ${visibleCount} signature dish${visibleCount === 1 ? '' : 'es'}`;
       }
     });
   });
@@ -113,7 +117,6 @@ function initFavoritesSystem() {
   const favoriteButtons = document.querySelectorAll('.btn-favorite');
   const navBadge = document.getElementById('favoritesCountBadge');
 
-  // Load existing favorites array from LocalStorage
   let favorites = [];
   try {
     favorites = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
@@ -132,24 +135,23 @@ function initFavoritesSystem() {
       const recipeId = btn.getAttribute('data-id');
       if (!recipeId) return;
 
+      const hasText = btn.classList.contains('btn-with-text');
       const index = favorites.indexOf(recipeId);
+
       if (index === -1) {
-        // Add to favorites
         favorites.push(recipeId);
         btn.classList.add('is-favorite');
-        btn.innerHTML = '❤️';
+        btn.innerHTML = hasText ? `${ICONS.heartFilled} Saved to Favorites` : ICONS.heartFilled;
         btn.setAttribute('aria-label', 'Remove from favorites');
         showToast('Saved to your favorites!');
       } else {
-        // Remove from favorites
         favorites.splice(index, 1);
         btn.classList.remove('is-favorite');
-        btn.innerHTML = '🤍';
+        btn.innerHTML = hasText ? `${ICONS.heartOutline} Save to Favorites` : ICONS.heartOutline;
         btn.setAttribute('aria-label', 'Save to favorites');
         showToast('Removed from favorites.');
       }
 
-      // Persist in localStorage
       localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
       updateFavoritesCounter();
     });
@@ -158,13 +160,15 @@ function initFavoritesSystem() {
   function restoreFavoriteButtons() {
     favoriteButtons.forEach(btn => {
       const recipeId = btn.getAttribute('data-id');
+      const hasText = btn.classList.contains('btn-with-text');
+
       if (favorites.includes(recipeId)) {
         btn.classList.add('is-favorite');
-        btn.innerHTML = '❤️';
+        btn.innerHTML = hasText ? `${ICONS.heartFilled} Saved to Favorites` : ICONS.heartFilled;
         btn.setAttribute('aria-label', 'Remove from favorites');
       } else {
         btn.classList.remove('is-favorite');
-        btn.innerHTML = '🤍';
+        btn.innerHTML = hasText ? `${ICONS.heartOutline} Save to Favorites` : ICONS.heartOutline;
         btn.setAttribute('aria-label', 'Save to favorites');
       }
     });
@@ -222,7 +226,6 @@ function initServingsScaler() {
       if (isNaN(baseQty)) return;
 
       const scaledQty = baseQty * factor;
-      // Format cleanly (e.g. 1.5, 2, 0.75)
       el.textContent = formatQuantity(scaledQty);
     });
   }
@@ -250,7 +253,6 @@ function initContactFormValidation() {
 
   if (!contactForm) return;
 
-  // Live character counter for accessibility & feedback
   if (messageInput && charCounter) {
     messageInput.addEventListener('input', () => {
       const length = messageInput.value.trim().length;
@@ -265,13 +267,11 @@ function initContactFormValidation() {
   }
 
   contactForm.addEventListener('submit', (event) => {
-    // Intercept default submission
     event.preventDefault();
 
     const nameValue = nameInput ? nameInput.value.trim() : 'Friend';
     const messageValue = messageInput ? messageInput.value.trim() : '';
 
-    // Validate message field contains > 20 characters
     if (messageValue.length <= 20) {
       if (messageError) {
         messageError.textContent = 'Please provide a more detailed message (minimum 21 characters).';
@@ -284,7 +284,6 @@ function initContactFormValidation() {
       return;
     }
 
-    // Validation succeeded: Hide form & show dynamic confirmation
     contactForm.style.display = 'none';
     if (confirmationCard && dynamicGreeting) {
       dynamicGreeting.textContent = `Thank you, ${nameValue}! We've received your message.`;

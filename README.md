@@ -1,10 +1,10 @@
-# 🍲 Tastes of Africa — African Culinary Heritage Website
+# Tastes of Africa — African Culinary Heritage Website
 
 A multi-page responsive web platform celebrating the rich, diverse gastronomic traditions and spice heritage of the African continent. Built with semantic **HTML5**, **CSS3 (Custom Properties & Modern Layouts)**, and **Vanilla JavaScript (DOM Manipulation & LocalStorage Persistence)** for the African Leadership University (ALU) Formative Assessment.
 
 ---
 
-## 🌟 Live Features & Technical Highlights
+## Live Features & Technical Highlights
 
 ### 1. Semantic HTML5 Architecture
 * **Semantic Page Layout:** Utilizes `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<figure>`, `<figcaption>`, `<aside>`, `<details>`, `<summary>`, and `<footer>`.
@@ -25,14 +25,14 @@ A multi-page responsive web platform celebrating the rich, diverse gastronomic t
 
 ### 3. Dynamic JavaScript & DOM Interactivity (`script.js`)
 * **Interactive Recipe Filter:** Filter dishes dynamically by culinary region (*All, West Africa, East Africa, North Africa, Southern Africa*) without page reloads using `addEventListener()` and `data-region` attributes.
-* **"Add to Favorites" System (LocalStorage Persistence):** Save and remove favorite dishes with visual heart state toggles (`❤️` / `🤍`). Saved favorites persist across browser refreshes and update a navigation badge.
+* **"Add to Favorites" System (LocalStorage Persistence):** Save and remove favorite dishes with visual heart state toggles (active and inactive states). Saved favorites persist across browser refreshes and update a navigation badge.
 * **Interactive Ingredient Servings Scaler:** Adjust portions (`-` / `+`) on any recipe page to automatically recalculate all ingredient quantities (e.g. from 4 to 8 servings).
 * **Form Interception & Dynamic Feedback:** Intercepts contact form submission (`event.preventDefault()`), validates that the message length exceeds 20 characters, hides the form upon success, and injects a personalized greeting (`"Thank you, [Name]! We've received your message."`).
 * **Mobile Drawer Navigation:** Accessible hamburger menu toggle for smartphones and tablets.
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 taste_of_africa_website_project/
@@ -53,7 +53,7 @@ taste_of_africa_website_project/
 
 ---
 
-## 🚀 How to Run Locally
+## How to Run Locally
 
 Because this project is written in standard web technologies (HTML5, CSS3, Vanilla JavaScript), no build tools or package managers are required!
 
@@ -72,7 +72,7 @@ Then visit `http://localhost:8000` in any web browser.
 
 ---
 
-## 📋 Rubric Alignment Checklist (30 / 30 Points)
+## Rubric Alignment Checklist (30 / 30 Points)
 
 | Criteria | Points | Status | Implementation Details |
 |---|---|---|---|
@@ -85,7 +85,7 @@ Then visit `http://localhost:8000` in any web browser.
 
 ---
 
-## 👨‍💻 Student Author Details
+## Student Author Details
 * **Student Name:** Lincoln Batsinduka
 * **Institution:** African Leadership University (ALU)
 * **Project Name:** `taste_of_africa_website_project`
